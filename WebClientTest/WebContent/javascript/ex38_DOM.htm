@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+</style>
+<script>
+var btn1;
+var list1 
+window.onload = function(){
+	list1 = document.getElementById("list1");
+	btn1=document.getElementById("btn1");
+	btn1.onclick=function(){
+		
+		//삭제의 형태
+		//1. 부모가 자식을 삭제
+		//2. 자식이 스스로 삭제
+		
+		//document.getElementById("list1").removeChild(document.getElementById("list1").childNodes[3]); //4번째 객체인 오라클li가 삭제됨
+		
+		
+		//자식노드들
+		//1. childNodes
+		// - 자식노드들(태그 PCDATA 주석 등..)
+		// - 전체 관리 가능
+		// - 태그만(원하는 요소) 관리하기에는 불편(index 관리)
+		//2. children
+		// - 자식 태그들(태그만)
+		
+		//alert(list1.childNodes.length);
+		list1.removeChild(list1.children[1]);
+		
+		
+	};
+	 
+	//li 삭제
+	for(var i=0; i<list1.children.length; i++){
+		list1.children[i].onclick = function(){
+			
+			if(confirm("항목을 정말 삭제하겠습니까?")){
+				
+				list1.removeChild(event.srcElement);
+			}
+		};
+	}
+	
+	
+	
+};
+	
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+
+	<!-- ex38_DOM.htm -->
+	
+	<h1>목록</h1>
+	
+	<input type="button" value="항목 삭제하기" id="btn1" />
+	
+	
+	<ul id="list1">
+		<li>자바</li>
+		<li>오라클</li>
+		<li>HTML</li>
+		<li>CSS</li>
+	</ul>
+
+
+
+
+
+
+
+	
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	table{
+		border:1px solid black;
+	}
+	td{
+		border:1px solid black;
+	}
+</style>
+<script>
+var postcheck,address,adressAll;
+window.onload = function(){
+	postcheck = document.all.postcheck;
+	
+	
+};
+
+function selectAddress(){
+	var child = window.open("parc04_child.htm","parc04_child","width=500,height=500");
+	
+};
+	
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	
+	<table>
+		<tr>
+			<td>우편번호</td>
+			<td>
+				<input type="text" name="leftpost" style="width:80px;"/> - <input type="text" name="rightpost" style="width:80px;"/>
+				<input type="button" value="우편번호 검사하기" name="postcheck" onclick="selectAddress();" />
+			</td>
+		</tr>
+		<tr>
+			<td>주소</td>
+			<td><input type="text" style="width:300px;" name="address" /></td>
+		</tr>	
+		<tr>
+			<td>상세주소</td>
+			<td><input type="text" style="width:300px;" name="addressAll" /></td>
+		</tr>
+	
+	</table>
+	
+</body>
+</html>

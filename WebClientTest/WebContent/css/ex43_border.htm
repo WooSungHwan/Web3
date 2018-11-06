@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+	.box{
+		margin:20px;
+	}
+	
+	#box1{
+		/* width : 200px */
+		border-radius:100px; /* 반지름이상 넘어가면 의미가 없다. */
+		padding:30px 35px 10px 20px;
+	}
+	#box2{
+		border-top-left-radius:50px;
+		border-top-right-radius:100px;
+		border-bottom-right-radius:50px;
+		border-bottom-left-radius:100px;
+	}
+	
+	#cat1{
+		border-radius:96px;
+	}
+	
+	.btn{
+		border-radius:3px;
+		border:1px solid #A9A9A9;
+	}
+	.btn i{
+		color:tomato;
+		font-size:2em;
+		border:1px solid #A9A9A9;
+		border-radlus:3px;
+		padding:5px 10px;
+		margin: 5px 0px;
+		background-color:white;
+	}
+	
+	.btn div{
+		font-size:14px;	
+		margin:2px 0px 5px 0px;
+	}
+	
+	.btn.blue i{
+		color:cornflowerblue:#777;
+	}
+	
+	#tbl1{
+		border:1px solid #A9A9A9;
+		border-radius:10px;
+		border-collapse: separate; /* (큰상자)테이블붙이는 순간 radius 무시됨. */
+	}
+	
+	#tbl1 td{
+		border:1px solid #A9A9A9;
+		padding:10px;
+		border-radius:5px;
+	}
+	
+	
+	
+	
+	
+</style>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex43_border.htm -->
+	
+	<div id="box1" class="box medium red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In at iusto enim fugiat officia libero cumque voluptates ad ipsam nemo voluptatum .</div>
+	
+	
+	<div id="box2" class="box medium blue">Sit ab eligendi optio minima cumque inventore consequuntur officia quam rerum voluptas libero doloremque id eaque nulla fugiat fugit quisquam .</div>
+	
+	
+	<img src="../images/cat01.jpg" alt="" id="cat1" />
+	
+	<hr />
+	
+	<input type = "button" value="test" style="background-color:#eee"> 
+	
+	<hr />
+	
+	<input type="text" style=""/>
+	<hr />
+	
+	<input type="text" style="background-color:#eee;" />
+	<hr />
+	<input type="text" id="txt1" 
+		style="border-radius:15px; border:1px solid #A9A9A9; outline:none; padding:3px 10px">
+	
+	<button id="btnLock" class="btn black">
+		<i class="fas fa-lock"></i>
+		<div>암호입력</div>
+	</button>
+	
+	<button id="btnLock1" class="btn blue">
+		<i class="fas fa-home"></i>
+		<div>초기화면</div>
+	</button>
+	
+	<button id="btnLock2" class="btn ">
+		<i class="fas fa-plus"></i>
+		<div>추가하기</div>
+	</button>
+	
+	<hr />
+	
+	<table id ="tbl1">
+		<tr>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+		</tr>
+		<tr>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+		</tr>
+		<tr>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+		</tr>
+		<tr>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+		</tr>
+		<tr>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+			<td>cell</td>
+		</tr>
+	</table>
+	
+	
+	
+	
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

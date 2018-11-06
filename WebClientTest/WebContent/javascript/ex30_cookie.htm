@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	#tbl1{
+		width:300px;
+	}
+	
+	#tbtl1 input[type=text],#tbtl1 input[type=password]{
+		width:100px;
+	}
+	#tbl1 input[type=button]{width:50px; height:40px;
+		display:block; margin:0px auto;}
+	
+	
+</style>
+<script src="/WebClientTest/javascript/js/cookie.js"></script>
+<script>
+var txtid,txtpw, btnlogin, cbid;
+window.onload = function(){ //페이지를 초기화할때 쿠키는 등장하여아함.
+	
+	txtid = document.all.txtid;
+	txtpw = document.all.txtpw;
+	btnlogin = document.all.btnlogin;
+	cbid = document.all.cbid;
+	
+	
+	//로그인 버튼 클릭
+	btnlogin.onclick = function(){
+		//로그인 처리 진행했다고 가정
+		
+		if((txtid.value=="hong")&&(txtpw.value="1234")|| (txtid.value=="test")&&(txtpw.value="1111")){			
+			//***아이디 기억하기(로그인 성공했을 때)
+			if(cbid.checked){//로그인성공, 체크박스 체크
+				//아이디 기억 -> 어딘가.. -> 쿠키!!
+				setCookie("id",txtid.value,30); //얼마동안 보관할지는 정책문제임
+			}else{
+				//아이디 삭제
+				setCookie("id",null,-1);
+			}
+			alert("로그인 성공!!")
+			location.href="#";
+		}else{
+			//로그인 실패
+			alert("로그인 실패!!");
+		}
+	};
+	//(쿠키에 아이디가 있을때)페이지 방문시 기억한 아이디를 텍스트 박스에 미리 넣어두기
+	if(getCookie("id")!=""){
+		//지난번 로그인 때 아이디 기억하기를 체크함.
+		txtid.value=getCookie("id"); //아이디 텍스트에 쿠키를 입력해놔버리기
+		txtpw.focus(); //포커스를 패스워드로
+		cbid.checked=true;
+	}else{
+		txtid.focus();
+	}
+	
+	//쿠키가 없으면 빈문자열로 /이건 만든사람에 따라 다르므로 확인해봐야한다.
+	/*alert(getCookie("id")=="");
+	alert(getCookie("id")==null);
+	alert(getCookie("id")==undefined);*/
+};
+	
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex30_cookie.htm -->
+	<h1>아이디 기억하기(=자동 로그인)</h1>
+	
+	<table id="tbl1" class ="table">
+		<tr>
+			<th>아이디</th>
+			<td><input type="text" name="txtid" tabindex="1"/></td>
+			<td rowspan="2"><input type="button" value="login" name="btnlogin" /></td>
+		</tr>
+		<tr>
+			<th>암호</th>
+			<td><input type="password" name="txtpw" tabindex="2" /></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<input type="checkbox" name="cbid" id ="cbid" />
+				<label for="cbid">아이디 기억하기</label>
+			</td>
+		</tr>
+	</table>
+	
+	
+</body>
+</html>

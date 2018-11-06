@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+</style>
+<script>
+
+window.onload = function(){
+	var btn1=document.all.btn1;
+	btn1.onclick = function(){
+		
+		var link1 = document.links["link1"];
+		link1.href="http://google.com";
+		link1.title="구글로 이동합니다.";
+		
+		//PCDATA 조작 (BOM 으로는 못함) 지금할 것은 DOM기능
+		link1.innerText="구글";
+		link1.target = "_blank";
+		
+		
+		
+		
+		
+	};//onclick
+	
+};//onload()
+	
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex21_link.htm -->
+	
+	<a href="http://naver.com" name="link1">네이버</a>
+	<hr />
+	<input type="button" value="테스트" name="btn1" />
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

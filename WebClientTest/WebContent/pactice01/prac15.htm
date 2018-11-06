@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+</style>
+<script>
+	var icon, tbl1;
+	var timer = 0;
+	var td;
+	window.onload = function() {
+		icon = document.getElementsByClassName("icon");
+		td = document.getElementsByTagName("td");
+		tbl1 = document.getElementById("tbl1");
+		for(var i =0; i<tbl1.childNodes.length; i++){
+			
+			td[i].style.overflow = "hidden";
+		}
+		for (var i = 0; i < icon.length; i++) {
+			icon[i].onmousedown = function() {
+				if (timer == 0) {
+				var c = event.srcElement;
+ 				c.style.zIndex = -1;
+				c.style.transition = "all .5s";
+				c.style.position = "relative";
+				c.style.transform = "translate(130px,130px)";
+				
+				timer = setTimeout(function() {
+					c.style.transform = "translate(0px,0px)";
+					timer=0;
+				}, 1000);
+				
+			};
+			
+			}
+		}
+
+	};
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<div class="main m600">
+		<ul>
+			<li>transform: translate(126px, 126px);</li>
+			<li>transition: all 1s;</li>
+			<li>overflow: hidden;</li>
+			<li>setTimeout();</li>
+
+		</ul>
+	</div>
+	<table id="tbl1">
+		<tr>
+			<td><img src="../images/rect_icon01.png" class="icon"></td>
+			<td><img src="../images/rect_icon02.png" class="icon"></td>
+			<td><img src="../images/rect_icon03.png" class="icon"></td>
+			<td><img src="../images/rect_icon04.png" class="icon"></td>
+			<td><img src="../images/rect_icon05.png" class="icon"></td>
+		</tr>
+		<tr>
+			<td><img src="../images/rect_icon06.png" class="icon"></td>
+			<td><img src="../images/rect_icon07.png" class="icon"></td>
+			<td><img src="../images/rect_icon08.png" class="icon"></td>
+			<td><img src="../images/rect_icon09.png" class="icon"></td>
+			<td><img src="../images/rect_icon10.png" class="icon"></td>
+		</tr>
+		<tr>
+			<td><img src="../images/rect_icon11.png" class="icon"></td>
+			<td><img src="../images/rect_icon12.png" class="icon"></td>
+			<td><img src="../images/rect_icon13.png" class="icon"></td>
+			<td><img src="../images/rect_icon14.png" class="icon"></td>
+			<td><img src="../images/rect_icon15.png" class="icon"></td>
+		</tr>
+		<tr>
+			<td><img src="../images/rect_icon16.png" class="icon"></td>
+			<td><img src="../images/rect_icon17.png" class="icon"></td>
+			<td><img src="../images/rect_icon18.png" class="icon"></td>
+			<td><img src="../images/rect_icon01.png" class="icon"></td>
+			<td><img src="../images/rect_icon02.png" class="icon"></td>
+		</tr>
+		<tr>
+			<td><img src="../images/rect_icon03.png" class="icon"></td>
+			<td><img src="../images/rect_icon04.png" class="icon"></td>
+			<td><img src="../images/rect_icon05.png" class="icon"></td>
+			<td><img src="../images/rect_icon06.png" class="icon"></td>
+			<td><img src="../images/rect_icon07.png" class="icon"></td>
+		</tr>
+	</table>
+
+</body>
+</html>

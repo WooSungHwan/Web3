@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+form>input {
+	display: block;
+	margin-bottom: 10px;
+}
+</style>
+<script>
+	var timer = 0;
+	var btn1, txt1, btn2;
+	var btn3, btn4, txt2;
+	var btn5, index = 0;
+	var n = 1;
+	var color = [ "red", "orange", "yellow", "green", "blue" ];
+	var cat;
+
+	window.onload = function() {
+		btn1 = document.form1.btn1;
+		txt1 = document.form1.txt1;
+		btn2 = document.form1.btn2;
+		btn3 = document.form1.btn3;
+		txt2 = document.form1.txt2;
+		btn4 = document.form1.btn4;
+		btn5 = document.form1.btn5;
+		cat = document.images["cat"];
+
+		btn1.onclick = function() {
+			/* 
+				타이머 함수.
+				1. window.setTimeout(함수,시간)
+					- 시간(ms[1/1000])
+					- 1회성
+				2. window.setInterval(함수,시간)
+					- 무한 반복(통제가능)
+			 */
+
+			//setTimeout("alert('test');",3000); 옛날스타일
+			// 		setTimeout(test,3000);//요즘쓰는 스타일 (실명함수 호출)
+			// 		setTimeout(function(){
+			// 			alert("test2");
+			// 		},5000); //alert은 해지시켜야(확인눌러야) 나머지 2초가 흐른다.
+			// 		setInterval(function(){
+			// 			alert("test3");
+			// 		},3000);                설정한 시간마다 반복해서 실행
+			//setTimeout(function(){
+			// 10초뒤 네이버 이동
+			//	location.href="http://www.naver.com";
+			//},10000);
+			//setInterval(function(){ 	시계구현
+			//	txt1.value=(new Date()).toLocaleTimeString();
+			//},1000);
+			setInterval(function() {
+				txt1.value = n;
+				n++;
+			}, 1000);
+
+		};//btn1.onclick
+
+		btn2.onclick = function() {
+			//alert(txt1.size);
+			// 		for(var i =20; i<200; i++){
+			// 			txt1.size=i;
+			// 		}
+
+			//incSize();
+			setInterval(function() {
+				//txt1.size+=1;
+				window.moveBy(10, 10); // 크롬은 지원안함
+			}, 100);
+
+		};
+
+		//시작
+		btn3.onclick = function() {
+			if (timer == 0) {
+				timer = setInterval(function() { //setInterval은 타이머 ID를반환한다
+					txt2.value = n;
+					n++;
+				}, 100);
+				console.log(timer);
+			}
+		};
+
+		//멈춤
+		btn4.onclick = function() {
+			//setInterval <-> clearInterval
+			//setTimeout <-> clearTimeout
+
+			//clearInterval(타이머 id);
+			clearInterval(timer);
+			timer = 0;
+		};
+
+		/* btn5.onclick = function(){
+			for(var i =0; i<1000000000;i++){
+				document.body.bgColor = color[index];
+				if(index > = color.length) index=0;
+			}
+			
+		}; */
+		/* 
+		setInterval(function(){
+			document.body.bgColor = color[index];
+			index++;
+			if(index >= color.length) index=0;
+		},100); */
+
+		n = 1;
+		timer = 0;
+
+		cat.onclick = function() {
+			if (timer == 0) { //멈춘상태
+				timer = setInterval(function() {
+					cat.src = "../images/catty0" + n + ".png";
+					n++;
+					if (n >= 10) {
+						n = 1;
+					}
+				}, 500);
+			}else{//동작중...
+				clearInterval(timer);
+				timer=0;
+			}
+
+		};
+
+	};//onload
+
+	var incSize = function incSize() {
+		//재귀호출
+		setTimeout(function() {
+			txt1.size += 1;
+			incSize();
+		}, 100);
+	};
+
+	var test = function test() {
+		alert('test');
+	};
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex27_timer.htm -->
+
+	<form action="" name="form1">
+		<input type="text" name="txt1" /> <input type="button" name="btn1"
+			value="테스트" /> <input type="button" name="btn2" value="테스트2" />
+		<hr />
+
+		<input type="text" name="txt2" style="text-align: right;" /> <input
+			type="button" name="btn3" value="시작" /> <input type="button"
+			name="btn4" value="멈춤" />
+		<hr />
+
+		<input type="button" value="테스트" name="btn5" />
+
+		<hr />
+		<img src="../images/catty04.png" name="cat" />
+
+	</form>
+
+
+</body>
+</html>

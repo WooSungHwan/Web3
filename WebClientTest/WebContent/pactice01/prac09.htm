@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+div {
+	width: 500px;
+	border: 0px solid black;
+	margin: 0px auto;
+}
+
+input[type=text], span {
+	width: 100px;
+	height: 100px;
+	font-size: 60px;
+}
+
+input[type=button] {
+	width: 80px;
+	height: 40px;
+}
+</style>
+<script>
+	var min, sec, ms;
+	var start, stop, reset;
+	var timer = 0;
+	var numMin = 0, numSec = 0, numMs = 0;
+	window.onload = function() {
+		min = document.all.min;
+		sec = document.all.sec;
+		ms = document.all.ms;
+		start = document.all.start;
+		stop = document.all.stop;
+		reset = document.all.reset;
+
+		min.value = "0"+numMin;
+		sec.value = "0"+numSec;
+		ms.value = "0"+numMs;
+
+		start.onclick = function() {
+			if (timer == 0) {
+				timer = setInterval(function() {
+					numMs++;
+					if(numMs<10){
+						ms.value = "0"+numMs;
+					}else{
+						ms.value=numMs;
+					}
+					if(numMs==99){
+						numMs=0;
+						ms.value="0"+numMs;
+						numSec++;
+						if(numSec<10){
+							sec.value = "0"+numSec;
+						}else{
+							sec.value = numSec;
+						}
+						if(numSec==60){
+							numSec=0;
+							sec.value="0"+numSec;
+							numMin++;
+							if(numMin<10){
+								min.value = "0"+numMin;
+							}else{
+								min.value = numMin;
+							}
+						}
+					}
+				}, 10);
+			}
+		};
+
+		stop.onclick = function() {
+			clearInterval(timer);
+			timer=0;
+		};
+		
+		reset.onclick = function(){
+			numMin=0;
+			numSec=0;
+			numMs=0;
+			min.value = "0"+numMin;
+			sec.value = "0"+numSec;
+			ms.value = "0"+numMs;
+			clearInterval(timer);
+			timer=0;
+		};
+	};
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+
+	<div>
+		<input type="text" value="" name="min" /><span>:</span> 
+		<input type="text" value="" name="sec" /><span>:</span> 
+		<input type="text" value="" name="ms" />
+	</div>
+	<div>
+		<input type="button" name="start" value="시작" /> 
+		<input type="button" name="stop" value="멈춤" />
+		<input type="button" name="reset" value="초기화" />
+	</div>
+
+</body>
+</html>

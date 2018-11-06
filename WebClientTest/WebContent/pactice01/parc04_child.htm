@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+</style>
+<script>
+var btn1,btn2,btn3;
+window.onload = function(){
+	btn1=window.document.all.btn1;
+	btn2=window.document.all.btn2;
+	btn3=window.document.all.btn3;
+	
+	
+	
+	btn1.onclick = function(){
+		opener.document.all.leftpost.value = 100;
+		opener.document.all.rightpost.value = 200;
+		opener.document.all.address.value = btn1.value;	
+		opener.document.all.addressAll.focus();
+		window.close();
+	};
+	btn2.onclick = function(){
+		opener.document.all.leftpost.value = 300;
+		opener.document.all.rightpost.value = 400;
+		opener.document.all.address.value = btn2.value;	
+		opener.document.all.addressAll.focus();
+		window.close();
+	};
+	btn3.onclick = function(){
+		opener.document.all.leftpost.value = 500;
+		opener.document.all.rightpost.value = 600;
+		opener.document.all.address.value = btn3.value;	
+		opener.document.all.addressAll.focus();
+		window.close();
+	};
+	
+	
+};
+	
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	
+	<input type="button" value="서울시 동대문구 회기동" name="btn1" /><br>
+	<input type="button" value="서울시 동대문구 휘경동" name="btn2" /><br>
+	<input type="button" value="서울시 동대문구 이문동" name="btn3" /><br>
+	
+</body>
+</html>

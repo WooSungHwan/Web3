@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+	#desc{
+		display:none;
+	}
+	#cb1:checked + label + #desc{
+		display:block;
+	}
+	
+	#box{
+		border:1px solid gray;
+		width:300px;
+	}
+	
+	#box #cb2{
+		display:none;
+	}
+	
+	#box label{
+		background-color:#ddd;
+		width:calc(100% - 20px); /* %값과 절댓값을 연산. 반드시 띄어쓰기할것. */
+		display:inline-block;
+		padding:10px;
+		cursor:pointer;
+	}
+	
+	#box #desc2{
+		display:none;
+		padding:10px;
+	}
+	#box #cb2:checked ~ #desc2{
+		display:block;
+	}
+	
+	/* .item label{
+		text-decoration:line-through
+	} 없었다치고.다시만들게요.*/
+	
+	.item input[type='checkbox']:checked + label{
+		text-decoration:line-through;
+		opacity:.5;
+	}
+	.item input[type='checkbox']:checked{
+		opacity:.5;
+	}
+	
+	
+	
+</style>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex40_selector.htm -->
+	
+	<input type="checkbox" id ="cb1"><label for="cb1">자바의 클래스</label>
+	<p id="desc">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatibus pariatur similique laboriosam itaque cum saepe modi doloremque asperiores sed rem molestiae dolor sequi temporibus sint ea possimus ullam assumenda eum quasi dolores magni quae amet necessitatibus earum architecto voluptate voluptatem aliquam placeat! Voluptas quae culpa reprehenderit doloribus quo repellendus labore sint distinctio. Beatae provident deserunt placeat quod debitis blanditiis explicabo iusto est ullam repudiandae veniam incidunt totam consequatur et officiis harum maxime iure doloremque ipsum nesciunt. Ad sunt ab accusantium sit amet molestiae fuga. Dolor inventore quaerat quas nobis numquam aspernatur maiores voluptatibus architecto provident earum illo officia eveniet nam unde alias quisquam magnam. Enim sapiente nemo blanditiis cumque nihil deleniti assumenda ad at tempore temporibus aperiam aspernatur sit facere quaerat odit perferendis accusamus cum natus mollitia iusto quis illum corrupti voluptatum unde impedit! Error dolorem enim voluptatibus laborum non fuga aperiam eius natus ipsam accusantium numquam accusamus quis!
+	
+</p>
+	<div>다른 내용...</div>
+	<hr />
+	
+	<div id ="box">
+	<input type="checkbox" id ="cb2"><label for="cb2">자바의 클래스</label>
+	<p id="desc2">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatibus pariatur similique laboriosam itaque cum saepe modi doloremque asperiores sed rem molestiae dolor sequi temporibus sint ea possimus ullam assumenda eum quasi dolores magni quae amet necessitatibus earum architecto voluptate voluptatem aliquam placeat! Voluptas quae culpa reprehenderit doloribus quo repellendus labore sint distinctio. Beatae provident deserunt placeat quod debitis blanditiis explicabo iusto est ullam repudiandae veniam incidunt totam consequatur et officiis harum maxime iure doloremque ipsum nesciunt. Ad sunt ab accusantium sit amet molestiae fuga. Dolor inventore quaerat quas nobis numquam aspernatur maiores voluptatibus architecto provident earum illo officia eveniet nam unde alias quisquam magnam. Enim sapiente nemo blanditiis cumque nihil deleniti assumenda ad at tempore temporibus aperiam aspernatur sit facere quaerat odit perferendis accusamus cum natus mollitia iusto quis illum corrupti voluptatum unde impedit! Error dolorem enim voluptatibus laborum non fuga aperiam eius natus ipsam accusantium numquam accusamus quis!
+	
+</p>
+</div>
+	<div>다른 내용...</div>
+	
+	<hr/>
+	
+	<h2>오늘의 할일</h2>
+	
+	<div class="item">
+		<input type="checkbox" id ="cb5">
+		<label for="cb5">이클립스 설치하기</label>
+	</div>
+	
+	<div class="item">
+		<input type="checkbox" id ="cb6">
+		<label for="cb6">회식 참여하기</label>
+	</div>
+	<div class="item">
+		<input type="checkbox" id ="cb3">
+		<label for="cb3">세탁소 셔츠 맡기기</label>
+	</div>
+	<div class="item">
+		<input type="checkbox" id ="cb4">
+		<label for="cb4">목욕하기</label>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

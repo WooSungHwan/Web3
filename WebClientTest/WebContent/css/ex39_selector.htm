@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+	
+	/* #parent div:nth-child(1){color:blue;} */
+	
+	/* #parent div:first-child{color:red;} */
+	/* #parent a:first-child{color:red;} */
+	#parent :first-child{color:red;}
+	
+	/* opacity background */
+	
+	body{
+		background-image:url(../images/wall08.jpg);
+	}
+	
+	#txt1{
+		/* background-color:transparent; 배경 투명*/
+		background-color:rgba(255,255,255,0.5);/* 단지 배경만...농도조절 */
+	}
+	
+	#txt2{
+		opacity:0.5; /* 글자나배경 경계선까지 다 농도 조절.. */
+	}
+	
+	
+	
+</style>
+
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+
+	<!-- ex39_selector.htm -->
+	
+	<div id="parent">
+		<!-- <a href="#">링크</a> -->
+		<div>자식</div>
+		<div>자식</div>
+		<div>자식</div>
+		<div>자식</div>
+		<div>자식</div>
+	</div>
+	
+	<hr />
+	
+	<input type="text" id ="txt1" value="background-color 투명색 구현" />
+	<input type="text" id ="txt2" value="opacity 투명색 구현" />
+	
+	<hr />
+	
+	<img src="../images/catty01.png" alt="" style="opacity:0.5;" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

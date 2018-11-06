@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	.one{
+		font-style:italic;
+		color:white;
+		font-size : 4em;
+	}
+	
+	.two{
+		border-width:10px;
+		height:400px;
+	}
+	.three {
+		transform:rotate(30deg);
+		opacity:.5;
+	}
+	
+</style>
+<script>
+
+var btn1, btn2, btn3, box1;
+
+window.onload = function(){
+	btn1=document.getElementById("btn1");
+	btn2 = document.getElementById("btn2");
+	btn3 = document.getElementById("btn3");
+	box1=document.getElementById("box1");
+	
+	//CSS속성 추가하기
+	
+	btn1.addEventListener("click",function(){
+// 		box1.style.fontSize = "3em";
+// 		box1.style.width="400px";
+// 		box1.style.backgroundColor="cornflowerblue";
+// 		box1.style.textdecoration = "Underline";
+		
+		//2.집합으로 제어 > class 제어
+		
+		//box1.className="box medium red one"; = 단순 + 다중클래스 제어는 불편함
+		//box1.className+=" one ";
+		
+		//3. 다중클래스 제어에 편한 방법
+		box1.classList.add("one");
+		box1.classList.add("two");
+		box1.classList.add("three");
+		
+	});
+	
+	btn2.onclick=function(){
+		box1.classList.remove("three");
+	};
+	
+	btn3.onclick=function(){
+		box1.classList.toggle("three");
+	};
+	
+	
+};
+	
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex43_style.htm -->
+	
+	<input type="button" id="btn1" value="CSS속성 추가하기" />
+	<input type="button" id="btn2" value="CSS속성 삭제하기" />
+	<input type="button" id="btn3" value="CSS 속성 토글" />
+	
+	<hr />
+	
+	<div id="box1" class="box medium red">상자입니다.</div>
+	
+	
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+div {
+	width: 500px;
+	border: 0px solid black;
+	margin: 0px auto;
+}
+
+
+
+input[type=button] {
+	width: 80px;
+	height: 40px;
+}
+</style>
+<script>
+	var txt1;
+	var n1,n2,n3,n4,n5,n6;
+	var start, stop, reset;
+	var timer = 0;
+	var numMin = 0, numSec = 0, numMs = 0;
+	var address="../images/";
+	window.onload = function() {
+		txt1 = document.all.txt1;
+		n1= document.images["n1"];
+		n2= document.images["n2"];
+		n3= document.images["n3"];
+		n4= document.images["n4"];
+		n5= document.images["n5"];
+		n6= document.images["n6"];
+		start = document.all.start;
+		stop = document.all.stop;
+		reset = document.all.reset;
+
+		
+
+		start.onclick = function() {
+			if (timer == 0) {
+				timer = setInterval(function() {
+					
+					if(numMs<10){
+						numMs="0"+numMs;
+					}else{
+						numMs=numMs+"";
+					}
+					
+					if(numSec<10){
+						numSec="0"+numSec;
+					}else{
+						numSec=numSec+"";
+					}
+					if(numMin<10){
+						numMin="0"+numMin;
+					}else{
+						numMin=numMin+"";
+					}
+					n1.src=address+numMin.substring(0,1)+".png";
+					n2.src=address+numMin.substring(1,2)+".png";
+					n3.src=address+numSec.substring(0,1)+".png";
+					n4.src=address+numSec.substring(1,2)+".png";
+					n5.src=address+numMs.substring(0,1)+".png";
+					n6.src=address+numMs.substring(1,2)+".png";
+					if(numMs==100){
+						numMs=0;
+						numSec++;
+						if(numSec==60){
+							numSec=0;
+							numMin++;
+						}
+						
+						
+						
+					}
+						
+						
+						
+						
+						
+					
+					numMs++;
+				}, 10);
+			}
+		};
+
+		stop.onclick = function() {
+			clearInterval(timer);
+			timer=0;
+		};
+		
+		reset.onclick = function(){
+			numMin=0;
+			numSec=0;
+			numMs=0;
+			n1.value="0";
+			n2.value="0";
+			n3.value="0";
+			n4.value="0";
+			n5.value="0";
+			n6.value="0";
+			clearInterval(timer);
+			timer=0;
+		};
+	};
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+
+	<div>
+		<img src="../images/0.png" name="n1"><img src="../images/0.png" name="n2"> <span>:</span> 
+		<img src="../images/0.png" name="n3"><img src="../images/0.png" name="n4"><span>:</span> 
+		<img src="../images/0.png" name="n5"><img src="../images/0.png" name="n6">
+	</div>
+	<div>
+		<input type="button" name="start" value="시작" /> 
+		<input type="button" name="stop" value="멈춤" />
+		<input type="button" name="reset" value="초기화" />
+	</div>
+	<input type="text" name="txt1" />
+</body>
+</html>

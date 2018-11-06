@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+<style>
+	#txt1{
+		/*텍스트 색상, 전경색, Fore Color  */
+		color : #444444; /* #333333 ~ #666666 */
+		/* 텍스트 정렬(수평 정렬) : <p> 내부의 모든 인라인 요소의 수평 정렬 */
+		text-align:center;
+	}
+	#txt2{
+		/* 글꼴크기 */
+		font-size:14px
+		/*
+		글꼴(폰트)
+		-현재 브라우저가 동작중인 컴퓨터에 설치되어 있는 폰트를 사용한다.
+		-서버측 폰트와는 무관
+		
+		폰트 종류를 나타내는 용어
+		1. serif : 획 끝에 장식이 있는 폰트
+		2. sans-serif : 획 끝에 장식이 없는 폰트
+		3. monospace : 문자의 폭이 균일한 폰트
+		4. cursive : 장식체(영문)
+		5. fantasy : 장식체(영문)
+		
+		
+		
+		*/
+		font-family: 'Malgun Gothic';
+		font-family: '맑은 고딕','광수체','궁서체','굴림체';
+		font-family: serif;
+		font-family: sans-serif;
+		font-family : 맑은고딕;
+		/* 스타일 */
+		font-style:italic; /* normal, italic  */
+		font-style:normal;
+		
+		/*두께*/
+		font-weight : bolder; /* normal, bold */
+		font-weight : lighter;
+		
+		/* 꾸미기 */
+		text-decoration : none;
+		
+		/*  자간  */
+		letter-spacing:0em;
+		
+		/* 어간 */
+		word-spacing:0em;
+		
+		/* 행간(줄간격) */
+		line-height : 1.4em; /* ************************ */
+		
+		/* 문단 들여쓰기 */
+		text-indent:1em;
+		
+	}
+	#txt3{
+	/* 평범한 텍스트 집합에 적용하는 서식 */
+	font-family :'맑은고딕';
+	color:#444;
+	font-size:14px;
+	line-height:1.4em;
+	
+	
+	}
+	
+	
+	
+	
+	
+	
+	#txt3{
+		/* 글꼴크기 */
+		font-size:17px
+	}
+	
+	/* 
+	HTML 수치 표현 
+	1. 숫자 : px , 문자수
+	2. 숫자% : 부모를 기준으로 하는 상대값.
+	
+	CSS 수치 표현
+	- 반드시 수치 뒤에는 단위를 표시해야 한다.
+	1. pt : 포인트(글꼴 단위) 1/72 단위
+	2. px : 픽셀(화소) 크기,글꼴,여백,위치 등
+	3. em : 이엠 - 기본 글꼴 크기를 기준으로하는 상대크기 표현(%와 유사) : 알파벳 대문자 M의 높이가 기준.!
+	4. % : 퍼센트 - 부모를 기준으로 하는 상대 크기, 크기, 여백, 위치,정렬 등...
+	5. rem : 알이엠
+	------------------------------------------------------------------------------------------------------
+	6. ex : 이엑스 - 기본 글꼴 크기를 기준으로하는 상대크기 표현(%와 유사) : 알파벳 소문자 x의 높이가 기준.!
+	7. mm : 밀리미터
+	8. cm : 센티미터
+	9. pc : 파이카(1:12pt)  
+	10. in : 인치
+	 
+	11. ..
+	
+	*/
+	
+	
+	
+	
+</style>
+
+</head>
+<body>
+	<!-- ex12_text.htm -->
+	
+	<h1 style ="color:blue; font-variant:small.caps">Oracle</h1>
+	
+	<p id="txt1" class="txt"><img src="../images/catty01.png" alt="고양이" />여기서, functionName은 유효한 식별자이고, returnType은 타입 식별자이며,
+statements는 함수가 호출될 때 실행되는 일련의 문장이며, parameterList, directives,
+localDeclarations는 옵션입니다.
+함수의 문장 블럭에는 프로시저에 적용되는 것과 같은 규칙이 적용됩니다. 문장 블럭에서 함
+수의 localDeclarations 부분에서 선언된 변수와 다른 식별자, 파라미터 리스트의 파라미터
+이름, 그리고 함수 선언이 속하는 유효 범위(scope) 내의 모든 식별자를 사용할 수 있습니다.
+확장 문법이 활성화된 상태에서는({$X+}), 모든 함수에서 Result가 암시적으로 선언됩니
+다. Result를 다시 선언하려고 하지 마십시오. 예를 들면,</p>
+	<p id="txt2" class="txt">여기서, functionName은 유효한 식별자이고, returnType은 타입 식별자이며,
+statements는 함수가 호출될 때 실행되는 일련의 문장이며, parameterList, directives,
+localDeclarations는 옵션입니다.
+함수의 문장 블럭에는 프로시저에 적용되는 것과 같은 규칙이 적용됩니다. 문장 블럭에서 함
+수의 localDeclarations 부분에서 선언된 변수와 다른 식별자, 파라미터 리스트의 파라미터
+이름, 그리고 함수 선언이 속하는 유효 범위(scope) 내의 모든 식별자를 사용할 수 있습니다.
+확장 문법이 활성화된 상태에서는({$X+}), 모든 함수에서 Result가 암시적으로 선언됩니
+다. Result를 다시 선언하려고 하지 마십시오. 예를 들면,</p>
+	<p id="txt3" class="txt">여기서, functionName은 유효한 식별자이고, returnType은 타입 식별자이며,
+statements는 함수가 호출될 때 실행되는 일련의 문장이며, parameterList, directives,
+localDeclarations는 옵션입니다.
+함수의 문장 블럭에는 프로시저에 적용되는 것과 같은 규칙이 적용됩니다. 문장 블럭에서 함
+수의 localDeclarations 부분에서 선언된 변수와 다른 식별자, 파라미터 리스트의 파라미터
+이름, 그리고 함수 선언이 속하는 유효 범위(scope) 내의 모든 식별자를 사용할 수 있습니다.
+확장 문법이 활성화된 상태에서는({$X+}), 모든 함수에서 Result가 암시적으로 선언됩니
+다. Result를 다시 선언하려고 하지 마십시오. 예를 들면,</p>
+	
+	
+</body>
+</html>

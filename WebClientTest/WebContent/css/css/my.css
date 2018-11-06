@@ -1,0 +1,81 @@
+/*WebContent > css > css > my.css*/
+
+
+/* 내 테이블 서식 */
+
+.tbale{
+	border:1px solid black;
+	border-collapse:collapse;
+}
+
+.table th, .table td{
+	border:1px solid black;
+}
+
+.table th{
+	background-color:#eee;
+}
+
+.bigfont th,.bigfont td{
+	font-size:20px;
+}
+.middlefont th, .middlefont td{
+	font-size:16px;
+}
+.smallfont th, .smallfont td{
+	font-size:14px;
+}
+
+.bigpadding th, .bigpadding td{
+	padding: 10px;
+}
+
+.middlepadding th, .middlepadding td{
+	padding: 5px;
+}
+.smallpadding th, .smallpadding td{
+	padding: 0px;
+}
+
+.bgRed th{
+	background-color:red;
+}
+.bgRed td{
+	background-color:tomato;
+}
+.bgBlue th{
+	background-color:blue;
+}
+.bgBlue td{
+	background-color:skyblue;
+}
+.fgWhite th{color:white;}
+.fgWhite td{color:white;}
+
+
+.alert{
+	border:1px dashed tomato;
+	border-left-width:15px;
+	padding:10px;
+	padding-left:15px;
+	font-size:14px;
+	color:black;
+	background-color:#FBCFD0;
+}
+.alert.long{
+	width:100%;
+}
+.alert.short{
+	width:25%;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	table{
+		border:1px solid black;
+	}
+	td{
+		border:1px solid black;
+	}
+</style>
+<script>
+var firstSsn,secondSsn,year,month,day,man,woman;
+window.onload = function(){
+	firstSsn = document.all.firstSsn;
+	secondSsn = document.all.secondSsn;
+	year = document.all.year;
+	month = document.all.month;
+	day = document.all.day;
+	man = document.all.man;
+	woman = document.all.woman;
+	
+	firstSsn.focus();
+	
+	firstSsn.onkeyup = function(){
+		if(firstSsn.value.length==6){
+			var ssn = firstSsn.value;
+			year.value = "19"+ssn.substring(0,2);
+			month.value = ssn.substring(2,4);
+			day.value = ssn.substr(4);
+			secondSsn.focus();
+		}
+	};
+	secondSsn.onkeyup = function(){
+		if(secondSsn.value.length>2){
+			return;
+		}
+		if(secondSsn.value.substring(0,1)%2==1){
+			man.checked=true;
+			woman.checked=false;
+		}else if(secondSsn.value.substring(0,1)%2==0){
+			woman.checked=true;man.checked=false;
+		}
+	};
+	
+	
+};
+	
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	
+	<h1>회원가입</h1>
+	
+	<table>
+		<tr>
+			<td>주민번호</td>
+			<td>
+				<input type="text" name="firstSsn" style="width:70px;" /> - <input type="text" name="secondSsn" style="width:70px;"/>
+			</td>
+		</tr>
+		<tr>
+			<td>생년월일</td>
+			<td>
+				<input type="text" name ="year" style="width:50px;"/> 년
+				<input type="text" name = "month" style="width:50px;"/> 월
+				<input type="text" name="day" style="width:50px;"/> 일
+			</td>
+		</tr>
+		
+		<tr>
+			<td>성별</td>
+			<td>
+				<input type="radio" value="남자" name="man"/>남자 <input type="radio" name="woman" value="여자"/>여자
+			</td>
+		</tr>
+		
+	</table>
+
+</body>
+</html>

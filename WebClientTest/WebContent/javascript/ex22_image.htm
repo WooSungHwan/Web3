@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+</style>
+<script>
+	var n;
+	var btn1,cat01,cat02;
+	var icon,btnSwitch;
+	var lion;
+window.onload = function(){
+	btn1=document.all["btn1"];
+	cat01 = document.images["cat01"];
+	cat02 = document.images["cat02"];
+	
+	icon = document.images["icon"];
+	btnSwitch=document.images["btnSwitch"];
+	
+	lion = document.images["lion"];
+	
+	btn1.onclick = function(){
+		//console.log(cat01.src); 읽기
+		//cat01.src="../images/cat02.jpg";
+		
+		//콘솔창에 그림의 너비와 높이를 출력.
+		//console.log(cat01.width);
+		//console.log(cat01.height);
+		
+		cat01.width=125; // width만 줄였는데도 height도 종횡비에 맞게 줄어든다.
+	};//btn1 click
+	
+	
+	//롤오버 이미지
+	cat02.onmouseover = function(){
+		//고양이의 src를 다른고양이로
+		cat02.src="../images/cat04.jpg";
+	}; //cat mouseover
+	cat02.onmouseout = function(){
+		//마우스가 나갈떄 원래고양이가 나타나도록
+		cat02.src="../images/cat02.jpg";
+	};//cat mouseout
+	
+	
+	
+	
+	icon.onmouseover = function(){
+		icon.src="../images/icon02.png";
+		
+	};//icon mouseover
+	
+	icon.onmouseout = function(){
+		icon.src="../images/icon01.png";
+		
+	}; //icon mouseout
+	
+	document.body.bgColor="black";
+	
+	btnSwitch.onclick = function(){
+		if(getFileName(btnSwitch.src)=="switch_off.png"){
+			btnSwitch.src="../images/switch_on.png";
+			document.body.bgColor="white";			
+		}else{
+			btnSwitch.src="../images/switch_off.png";
+			document.body.bgColor="black";
+		}
+	};
+
+	n=1;
+	
+	lion.onclick=function(){
+		n++;
+		if(n>5) n=1;
+		lion.src="../images/dog0"+n+".jpg";
+		
+			
+		
+	};
+	
+	
+};//onload
+
+window.onkeydown = function(){
+	/* if(event.keyCode==65){
+		btnSwitch.click();
+	} a 누르면 이미지 변경? */
+	/* if(event.keyCode==37){//왼
+		cat01.src="../images/cat01.jpg";
+	}else if(event.keyCode==38){//위
+		cat01.src="../images/cat02.jpg";
+	}else if(event.keyCode==39){//오
+		cat01.src="../images/cat03.jpg";
+	}else if(event.keyCode==40){//하
+		cat01.src="../images/cat04.jpg";
+	} */
+	/* if(event.keyCode==37){//왼 > 이전이미지
+		n--;
+		if(n<1){
+			n = 1;
+			alert("이전이미지가 없습니다.");
+		}
+	}else if(event.keyCode==39){//오 > 다음이미지
+		n++;
+		if(n>5){
+			n = 5;
+			alert("다음이미지가 없습니다.");
+		}
+	}
+	lion.src="../images/dog0"+n+".jpg"; */
+	if(event.keyCode>=49&&event.keyCode<=57){	
+		var num = event.keyCode-48;
+		lion.src="../images/wall0"+num+".jpg";	
+	}
+	
+};
+
+
+
+	
+function getFileName(path){
+	var index = path.lastIndexOf("/");
+	if(index>-1){
+		var result = path.substr(index+1);
+		return result;
+	}else{
+		return null;
+	}
+};
+	
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex22_image.htm -->
+	
+	<input type="button" value ="테스트" name="btn1" />	
+	<hr />
+	<img src="../images/cat01.jpg" name="cat01" />
+	
+	<hr />
+	<img src="../images/cat02.jpg" name="cat02" />
+	
+	<hr />
+	<img src="../images/icon01.png" name="icon" />
+	
+	<hr />
+	<img src="../images/switch_off.png" name="btnSwitch" />
+
+	<hr />
+	<img src="../images/wall08.jpg" name="lion" />
+
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

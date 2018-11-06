@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+	.box{width:100px;height:50px;margin:20px 0px; transition:width 10s;}
+	
+	/* 
+	transition-timing-function, 전환패턴
+	-구간별 속도 제어(조절)
+	1. linear(등속운동) : 등속
+	2. ease(default) : 시작느림- 중간빠름 끝느림
+	3. ease-in : 시작느림- 중간빠름 -끝 느림
+	4. ease-out : 시작빠름- 끝느림
+	5. ease-in-out : 시작빠름 - 중간느림 - 끝빠름
+	
+	
+	
+	
+	 */
+	
+	#box1{transition-timing-function:linear;}
+	#box2{transition-timing-function:ease;}/*  */
+	#box3{transition-timing-function:ease-in;}
+	#box4{transition-timing-function:ease-out;}
+	#box5{transition-timing-function:ease-in-out;} 
+	
+	
+	#pbox:hover .box{
+		width:1000px;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</style>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex53_transition.htm -->
+	<div id ="pbox">
+		<div id="box1"  class="box red">linear</div>
+		<div id="box2"  class="box green">ease</div>
+		<div id="box3"  class="box blue">ease-in</div>
+		<div id="box4"  class="box yellow">ease-out</div>
+		<div id="box5"  class="box orange">ease-in-out</div>
+	</div>
+	
+</body>
+</html>

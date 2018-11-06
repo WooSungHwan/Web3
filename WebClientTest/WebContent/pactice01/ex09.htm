@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+	.mbox{
+		border:1px solid black;
+	
+	}
+	#bigbox{
+		width:800px;
+		margin:auto;
+	}
+	
+	#bigbox > #middlebox > div{
+		width:230px;
+		margin:10px;
+		float:left;
+	}
+	
+	#bigbox > #rb1 ~ div > #dog > img{
+		opacity:0.2;
+		border-radius:50%;
+		transition:all 1s;
+	} 
+	
+	#bigbox > #rb1:checked ~ div > #dog > img{ /* 체크된 개 */
+		opacity:1;
+		border-radius:0%;
+	} 
+	
+	#bigbox > #rb2 ~ div > #cat > img{
+		opacity:0.2;
+		border-radius:50%;
+		transition:all 1s;
+	}
+	
+	#bigbox > #rb2:checked ~ div > #cat > img{ /* 체크된 고양이 */
+		opacity:1;
+		border-radius:0%;
+	} 
+	
+	
+	
+	
+	
+	
+</style>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	
+	<div id = "bigbox" class = "mbox">
+		<input type="radio" id="rb1" name = rb/><label for="rb1">강아지</label>
+		<input type="radio" id="rb2" name = rb/><label for="rb2">고양이</label>
+		<hr />
+		<div id = "middlebox" class = "mbox">
+			<div id = "cat"><img src="../images/cat01.jpg" alt="" /></div>
+			<div id = "dog"><img src="../images/dog01.jpg" alt="" /></div>
+			<div id = "cat"><img src="../images/cat02.jpg" alt="" /></div>
+			<div id = "dog"><img src="../images/dog02.jpg" alt="" /></div>
+			<div id = "cat"><img src="../images/cat03.jpg" alt="" /></div>
+			<div id = "dog"><img src="../images/dog03.jpg" alt="" /></div>
+			<div id = "cat"><img src="../images/cat04.jpg" alt="" /></div>
+			<div id = "dog"><img src="../images/dog04.jpg" alt="" /></div>
+			<div id = "cat"><img src="../images/cat05.jpg" alt="" /></div>
+			<div id = "dog"><img src="../images/dog05.jpg" alt="" /></div>
+		</div>
+		<div style="clear:both;"></div>
+	
+	
+	
+	
+	
+	
+	</div>
+	
+	
+</body>
+</html>

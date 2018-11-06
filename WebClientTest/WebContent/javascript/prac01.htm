@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+</style>
+<script>
+var form1,txt1,txt2,btnSubmit;
+window.onload = function(){
+	
+	
+	form1= document.forms["form1"];
+	txt1= document.forms["form1"].txt1;
+	txt2 = document.forms["form1"].txt2;
+	
+	btnSubmit = document.forms["form1"].btnSubmit;
+	
+	txt1.onkeydown = function(){
+		if(event.keyCode==13){
+			btnSubmit.click();
+		}
+	};
+	txt2.onkeydown = function(){
+		if(event.keyCode==13){
+			btnSubmit.click();
+		}
+	};
+	
+	document.forms["form1"].btnSubmit.onclick = function(){
+		var txtID = txt1.value;
+		var txtPW = txt2.value;
+		
+		if(txtID==""){
+			alert("아이디가 입력되지 않았습니다.")
+			txt1.focus();
+			return;
+		}
+		if(txtPW==""){
+			alert("비밀번호가 입력되지 않았습니다.");
+			txt2.focus();
+			return;
+		}
+		btnSubmit.submit();
+	};
+	
+	
+};
+
+
+
+</script>
+<title></title>
+</head>
+<body>
+	
+	<form name="form1">
+		<input type="text" name="txt1" />
+		<input type="password" name="txt2" />
+		<input type="submit" name="btnSubmit" onsubmit="return false;" value="전송"/>
+	</form>
+	
+	
+	
+</body>
+</html>

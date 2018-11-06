@@ -1,0 +1,409 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+</style>
+
+<script>
+	var txt1, cb1, cb2, cb3, btn1;
+	var cbAgree, btnNext;
+	//<body onload="">와 동일한 역할
+
+	//좀더 효율적인 코드 생산량을 위한 작업.
+	window.onload = function() {
+		alert('하하하');
+		txt1 = window.document.form1.txt1;
+		cb1 = window.document.form1.cb1;
+		cb2 = window.document.form1.cb2;
+		cb2 = window.document.form1.cb3;
+		btn1 = window.document.form1.btn1;
+
+		cbAgree = window.document.form1.cbAgree;
+		btnNext = window.document.form1.btnNext;
+
+		//click 이벤트는 마우스 관련 이벤트가 아니다!!!!!!!!(****);
+		btn1.onclick = function() {
+
+			//alert('btn1 클릭');
+			//HTML 태그의 속성 제어
+			// - 자바스크립트 개발자의 접근성을 높이기 위해서 HTML 태그가 가지는 속성을 동일한 이름으로 자바스크립트에서도 제공하고 있다.(input value -> txt1.value)
+			// - 속성의 대부분은 읽기/쓰기를 모두 지원한다.
+			// - HTML의 속성명이 유효하지 않으면 캐멀표기법(readOnly)으로 제공한다.
+			// - HTML의 속성값
+			//		a. 숫자 -> 숫자
+			//		b. 열거형 -> 문자열
+			//		c. 색상 -> 문자열
+			// 		d. 플래그 -> 논리형(true,false)
+			//txt1.size=70;
+			//p1.align="left";
+			//window.document.body.bgColor ="#FFFF00"; //c.
+			//txt1.readOnly = true;
+
+			//하면 안되는 행동.
+			//txt1.name ="txt2";
+			/* txt1.type="radio"; */
+
+			//어떻게 체크박스를 찾을거야?
+			/* 
+			alert(cb1.checked);
+			alert(cb2.checked);
+			alert(cb3.checked); */
+
+			//라디오박스는 어떻게 찾을거야??
+			var rb = window.document.form1.rb;
+			/* alert(rb[0].checked);
+			alert(rb[1].checked);
+			alert(rb[2].checked); */
+
+			for (var i = 0; i < rb.length; i++) {
+				if (rb[i].checked) {
+					alert(i);
+					break;
+				}
+			}
+
+		};//btn1.click
+		/* cbAgree.onclick */
+		cbAgree.onchange = function() {
+			alert('체크');
+			/* if(cbAgree.checked){
+				btnNext.disabled = false;
+			}else{
+				
+			} */
+
+		};
+
+	};
+</script>
+
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	ex12_attribute.htm
+
+	<form name="form1">
+		텍스트 박스 : <input type="text" name="txt1" />
+		<hr />
+
+		<input type="checkbox" name="cb1" /> <input type="checkbox"
+			name="cb2" /> <input type="checkbox" name="cb3" />
+		<hr />
+
+		<input type="radio" name="rb" />라디오버튼1 <input type="radio" name="rb" />라디오버튼2
+		<input type="radio" name="rb" />라디오버튼3
+		<hr />
+
+		<button type="button" name="btn1">버튼</button>
+	</form>
+
+	<hr />
+
+	<h1>약관</h1>
+	<div
+		style="width: 300px; height: 200px; border: 1px solid black; overflow: auto; margin-bottom: 20px;">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+		dicta animi magnam porro nihil repellat. Illo blanditiis iste
+		voluptatum nobis qui veritatis labore id illum ipsa ut officia libero
+		ipsum expedita. Quod sint obcaecati eveniet deleniti quaerat dolor
+		maiores est officia molestiae nemo cumque ipsa eos. Nostrum deserunt
+		numquam non iste harum aliquid nam sint laborum optio esse possimus
+		natus ab dolore consequuntur voluptatum nulla quasi facilis error
+		dolorum eius ducimus provident consectetur atque doloremque unde autem
+		vel beatae impedit aliquam vero. Quidem vel consequatur sed illo
+		numquam odio at delectus officia iure porro nobis ex eos deleniti quo
+		laudantium ea quaerat dignissimos dolor saepe minima. Officia
+		doloribus cumque accusantium ea magni commodi ratione ex dolore fugit
+		ad necessitatibus cum et eaque neque nostrum porro quam maiores
+		quaerat modi provident error debitis illum rem aliquam est ab quia!
+		Consequuntur laboriosam dignissimos aliquid! Corporis cumque
+		voluptates alias magni delectus recusandae quis omnis molestiae quas
+		magnam! Sapiente at quia incidunt nam reprehenderit recusandae
+		doloremque voluptatem et unde placeat dolor quas beatae sed in facere
+		sunt nisi eos quisquam illo consequatur! Vero excepturi ipsa minima
+		ipsam quos cum ut ea aperiam nulla incidunt ex neque similique
+		repudiandae saepe fugiat deserunt odit dicta placeat nisi corporis
+		natus quo mollitia at asperiores molestiae provident eos! Ipsa tempora
+		aut nulla et non nemo libero maiores odio corrupti possimus tempore
+		quisquam aliquid quae quos reiciendis voluptatibus blanditiis quo
+		commodi quod obcaecati ex accusantium cumque asperiores molestiae
+		saepe! Temporibus facere et laboriosam voluptate est laborum rerum
+		aperiam voluptatum repellendus exercitationem. Voluptas error labore
+		corporis illo ea fuga molestias odit modi quia dolorem debitis
+		possimus quam impedit reprehenderit rem consequuntur quaerat facilis
+		id repellendus minus et architecto quasi! Tenetur nulla dicta natus
+		soluta ipsam eos eum excepturi necessitatibus maiores delectus culpa
+		ratione nesciunt fugiat voluptas fuga a aliquam quos.</div>
+
+
+	<input type="checkbox" name="cbAgree" id="cbAgree" />
+	<label for="cbAgree">약관에 동의합니다.</label>
+	<input type="button" value="다음 단계로" name="btnNext" disabled
+		onclick="alert('다음으로..');" />
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
+ 
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+<style>
+	body{
+		margin-bottom:200px;
+	}
+</style>
+<script>
+	
+	var txt1, cb1, cb2, cb3, btn1;
+	var cbAgree, btnNext;
+	var name1,name2,cbCopy, address1,address2;
+	var cbHobby, btnResult, txtResult;
+	
+	//<body onload="">와 동일한 역할
+	window.onload = function() {
+		
+		//alert("안녕~");
+		txt1 = window.document.form1.txt1;
+		cb1 = window.document.form1.cb1;
+		cb2 = window.document.form1.cb2;
+		cb3 = window.document.form1.cb3;
+		btn1 = window.document.form1.btn1;
+		
+		cbAgree = window.document.form1.cbAgree;
+		btnNext = window.document.form1.btnNext;
+		
+		name1=window.document.form1.name1;
+		name2=window.document.form1.name2;
+		address1=window.document.form1.address1;
+		address2=window.document.form1.address2;
+		cbCopy=window.document.form1.cbCopy;
+		
+		cbHobby = window.document.form1.cbHobby;//체크박스 8개가 들어있는 배열이됨
+		btnResult = window.document.form1.btnResult;
+		txtResult = window.document.form1.txtResult;
+		
+		
+		//click 이벤트는 마우스 관련 이벤트가 아니다.(***)
+		btn1.onclick = function() {
+			//alert("click");
+			
+			//HTML 태그의 속성 제어
+			// - 자바스크립트 개발자의 접근성을 높히기 위해서 HTML 태그가 가지는 속성을 동일한 이름으로 자바스크립트에서 제공하고 있다.(<input value> -> txt1.value)
+			// - 속성의 대부분은 읽기/쓰기를 모두 지원하다.
+			// - HTML의 속성명이 유효하지 않으면 캐멀 표기법으로 제공한다.
+			// - HTML의 속성값
+			//		a. 숫자 -> 숫자
+			//		b. 열거형 -> 문자열
+			//		c. 색상 -> 문자열
+			//		d. 플래그 -> 논리형
+			//txt1.size = 70; //a.
+			//p1.align = "left"; //b.
+			//window.document.body.bgColor = "#FFFF00"; //c.
+			//txt1.readOnly = true;
+			
+			//하면 안되는 행동
+			//txt1.name = "txt2";
+			//txt1.type = "button";
+			
+			
+			//alert(cb1.checked);
+			//alert(cb2.checked);
+			//alert(cb3.checked);
+			
+			
+			var rb = window.document.form1.rb;//배열 반환
+			//alert(rb.length);
+			//alert(rb[0].checked);
+			//alert(rb[1].checked);
+			//alert(rb[2].checked);
+			for (var i=0; i<rb.length; i++) {
+				if (rb[i].checked) {
+					alert(i);
+					break;
+				}
+			}
+			
+			
+		};//btn1.click
+		
+		
+		
+		//해당 컨트롤의 값이 변경될 때 발생
+		//cbAgree.onclick = function() { alert("체크"); };
+		cbAgree.onchange = function() { 
+			//체크O, 체크X
+			/* alert(cbAgree.checked); */
+			
+			if (cbAgree.checked) {
+				btnNext.disabled = false;
+			} else {
+				btnNext.disabled = true;
+			}
+		};
+		
+		cbCopy.onchange = function(){
+			if(cbCopy.checked){
+				name2.value = name1.value;
+				address2.value=address1.value;
+			}else{
+				//배송지를 다르게 입력하고 싶을 때
+				name2.value= ""; 
+				address2.value="";
+				name2.focus(); // 활성화 이름에 포커스감
+			}
+		};
+		
+		
+		btnResult.onclick = function ()	 {
+			txtResult.value=null;
+			for (var i =0; i<cbHobby.length; i++){
+/* 					alert(cbHobby[i].checked); */
+				if(cbHobby[i].checked){
+					txtResult.value+=cbHobby[i].value+"\r\n";
+				}else{
+					
+				}
+			}
+		};
+		
+		
+		
+	};//window,onload
+	
+</script>
+</head>
+<body>
+	<!-- ex12_attribute.htm -->
+	
+	<form name="form1">
+		텍스트 박스 : <input type="text" name="txt1">
+		<hr>
+		
+		<input type="checkbox" name="cb1"> 체크박스1
+		<input type="checkbox" name="cb2"> 체크박스2
+		<input type="checkbox" name="cb3"> 체크박스3
+		<hr>
+		
+		<input type="radio" name="rb"> 라디오버튼1
+		<input type="radio" name="rb"> 라디오버튼2
+		<input type="radio" name="rb"> 라디오버튼3
+		<hr>
+		
+		<button type="button" name="btn1">버튼</button>
+		
+		<hr>
+		
+		<h1>약관</h1>
+		
+		<div style="width: 300px; height: 200px; border: 1px solid gray; overflow: auto; margin-bottom: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique numquam at alias nesciunt esse doloribus beatae labore nobis! Nihil ex accusamus voluptate iste quasi rem possimus! Repellendus sapiente aperiam modi earum voluptate sunt nisi temporibus laborum unde. Repellendus velit et explicabo natus quae quas distinctio ea sequi veniam voluptatibus modi provident dolores dignissimos cupiditate deleniti voluptate necessitatibus repudiandae amet totam inventore qui quidem harum atque aliquid accusantium excepturi consectetur eius alias nam optio maiores aliquam earum mollitia dolorem cumque facilis illum. Nobis voluptates corporis mollitia iusto ad facilis ratione distinctio quasi in odio nihil recusandae consequuntur voluptas! Nulla consequatur culpa omnis labore sint eaque provident sequi nobis eum inventore odit aperiam molestias non quibusdam tempore ad perferendis. Vel adipisci vero temporibus dolorum facere reprehenderit doloremque voluptates sint iste reiciendis incidunt minima officiis eaque ea quaerat velit ab excepturi fugiat nulla in quas illum doloribus dicta beatae sunt minus tempora quam! Incidunt sint suscipit ut atque in illo facilis. Magnam earum debitis animi porro corporis ipsam atque? Eveniet nam ducimus facere fuga deserunt eum dolores neque asperiores excepturi labore obcaecati corporis est fugit nemo alias architecto aliquid esse illo temporibus sint similique perferendis quasi at cumque doloremque molestiae a. Sunt veritatis porro recusandae impedit aspernatur est sint fuga optio rerum a non vero doloribus dolore deserunt ullam provident voluptatem maiores necessitatibus at cumque velit nulla magni iste quasi saepe id harum ipsa assumenda qui perspiciatis! Ipsum ex iusto magnam illum velit modi alias nihil rerum expedita veritatis itaque suscipit magni accusamus ipsa pariatur nostrum omnis dolorum rem unde laudantium eveniet dolore recusandae mollitia sapiente necessitatibus. Sunt repellat impedit expedita iste tenetur quisquam eos facere esse accusamus illo at mollitia inventore iure commodi consequuntur repudiandae eligendi maxime deleniti ratione numquam rerum possimus modi aliquam sapiente fugiat ipsa architecto ad vero sit temporibus!</div>
+		
+		<input type="checkbox" name="cbAgree" id="cbAgree">
+		<label for="cbAgree">약관에 동의합니다.</label>
+		
+		<input type="button" value="다음 단계로"
+			name="btnNext" disabled 
+			onclick="alert('다음으로...');">
+		
+		<hr />
+		
+		<h1>배송지</h1>
+		<h2>회원 주소</h2>
+		<input type="text" name="name1" value="홍길동" /><br />
+		<input type="text" name="address1" value="서울시 강남구 역삼동" />
+		
+		<div style="margin-top:20px;">
+			<input type="checkbox" name="cbCopy"  />
+			회원과 받는분의 주소가 동일합니다.
+		</div>
+		
+		<h2>배송 주소</h2>
+		<input type="text" name="name2" placeholder="받는 분 성함" /><br />
+		<input type="text" name="address2" placeholder="받는 분 주소"/>
+		
+		
+		<hr />
+		<h1>취미를 선택하세요.(중복체크 가능)</h1>
+		<input type="checkbox" name= "cbHobby" value="수영"/>수영
+		<input type="checkbox" name= "cbHobby" value="영화"/>영화
+		<input type="checkbox" name= "cbHobby" value="독서"/>독서
+		<input type="checkbox" name= "cbHobby" value="게임"/>게임
+		<input type="checkbox" name= "cbHobby" value="코딩"/>코딩
+		<input type="checkbox" name= "cbHobby" value="요리"/>요리
+		<input type="checkbox" name= "cbHobby" value="낮잠"/>낮잠
+		<input type="checkbox" name= "cbHobby" value="여행"/>여행
+		
+		<hr />
+		
+		<input type="button" value="결과보기" name="btnResult"/>
+		
+		<hr />
+		
+		<textarea name="txtResult" cols="40" rows="10"></textarea>
+		
+		
+		
+		
+		
+		
+		
+	</form>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

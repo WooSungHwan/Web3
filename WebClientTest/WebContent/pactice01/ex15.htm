@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	#bigbox{
+		width:650px;
+		height:800px;
+		border:10px solid black;
+		margin:50px;
+	}
+	
+	@keyframes keyBall1{
+		0%{transform:translate(15px,0px);}
+		100%{transform:translate(15px,730px);}
+	}
+	
+	@keyframes keyBall2{
+		0%{transform:translate(20px,0px);}
+		100%{transform:translate(20px,730px);}
+	}
+	
+	@keyframes keyBall3{
+		0%{transform:translate(50px,0px);}
+		100%{transform:translate(50px,730px);}
+	}
+	
+	@keyframes keyBall4{
+		0%{transform:translate(80px,0px);}
+		100%{transform:translate(80px,730px);}
+	}
+	@keyframes keyBall5{
+		0%{transform:translate(110px,0px);}
+		100%{transform:translate(110px,730px);}
+	}
+	@keyframes keyBall6{
+		0%{transform:translate(150px,0px);}
+		100%{transform:translate(150px,730px);}
+	}
+	.ball{
+		border:10px solid black;
+		width:50px;
+		height:50px;
+		border-radius:50%;
+		float:left;
+	}
+	
+	#ball1{
+		animation-name:keyBall1;
+		background-color:red;
+		animation-duration:1s;
+		animation-iteration-count:infinite;
+		animation-direction:alternate;
+		animation-timing-function:ease;
+	}
+	#ball2{
+		animation-name:keyBall2;
+		background-color:yellow;
+		animation-duration:1.5s;
+		animation-iteration-count:infinite;
+		animation-direction:alternate;
+		animation-timing-function:ease;
+	}
+	#ball3{
+		animation-name:keyBall3;
+		background-color:green;
+		animation-duration:0.6s;
+		animation-iteration-count:infinite;
+		animation-direction:alternate;
+		animation-timing-function:ease;
+	}
+	#ball4{
+		animation-name:keyBall4;
+		background-color:blue;
+		animation-duration:2.1s;
+		animation-iteration-count:infinite;
+		animation-direction:alternate;
+		animation-timing-function:ease;
+	}
+	#ball5{
+		animation-name:keyBall5;
+		background-color:purple;
+		animation-duration:0.9s;
+		animation-iteration-count:infinite;
+		animation-direction:alternate;
+		animation-timing-function:ease;
+	}
+	#ball6{
+		animation-name:keyBall6;
+		background-color:indigo;
+		animation-duration:1.3s;
+		animation-iteration-count:infinite;
+		animation-direction:alternate;
+		animation-timing-function:ease;
+	}
+</style>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	
+	<div id="bigbox" class="box">
+	
+		<div id="ball1" class="ball"> </div>
+		<div id="ball2" class="ball"> </div>
+		<div id="ball3" class="ball"> </div>
+		<div id="ball4" class="ball"> </div>
+		<div id="ball5" class="ball"> </div>
+		<div id="ball6" class="ball"> </div>
+	
+	
+	
+	</div>
+	
+</body>
+</html>

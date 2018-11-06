@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	body{
+	}
+	div{
+		border:1px solid black;
+		margin:0 auto;
+	}
+	img{
+		border:10px solid gray;
+		margin:10px 15px;
+	}
+	input{ padding: 10px; font-size: 1.7em;  margin: 20px 5px; }
+	
+</style>
+<script>
+var rect01,rect02,rect03,rect04,rect05,rect06,rect07,rect08,rect09;
+var reset,input;
+window.onload = function(){
+	
+	
+	
+	
+};
+var answer = [1,4,7,8,9];
+
+var array = new Array(5);
+var i =0;
+function change(){
+	event.srcElement.src="../images/rect_icon10.png";
+	array[i]=event.srcElement.alt;
+	i++;
+};
+
+function input(){
+	var qeustion;
+	var result;
+	
+	for(var i =0; i<array.length;i++){
+		qeustion+=array[i]+"";
+	}
+	for(var i =0; i<answer.length;i++){
+		result+=answer[i]+"";
+	}
+	console.log()
+	if(qeustion==result){
+		location.href="http://www.naver.com";
+	}else{
+		alert('오답입니다.');
+	}
+};
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+
+	
+	
+	<div style="text-align:center; width:600px; height:600px;">
+		<img src="../images/rect_icon01.png" alt="1" name="rect01" onmouseover="change();"/>
+		<img src="../images/rect_icon02.png" alt="2" name="rect02" onmouseover="change();"/>
+		<img src="../images/rect_icon03.png" alt="3" name="rect03" onmouseover="change();"/>
+		<img src="../images/rect_icon04.png" alt="4" name="rect04" onmouseover="change();"/>
+		<img src="../images/rect_icon05.png" alt="5" name="rect05" onmouseover="change();"/>
+		<img src="../images/rect_icon06.png" alt="6" name="rect06" onmouseover="change();"/>
+		<img src="../images/rect_icon07.png" alt="7" name="rect07" onmouseover="change();"/>
+		<img src="../images/rect_icon08.png" alt="8" name="rect08" onmouseover="change();"/>
+		<img src="../images/rect_icon09.png" alt="9" name="rect09" onmouseover="change();"/>
+	</div>
+	
+	<div style="text-align:center;">
+		<input type="button" value="Reset" name="reset" onclick="location.href='prac07.htm'"/>
+		<input type="button" value="Input" name="input" onclick="input();"/>
+	</div>
+
+
+
+
+</body>
+</html>

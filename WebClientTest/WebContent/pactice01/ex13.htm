@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+	#bigbox{
+		width:1200px;
+		border:10px solid black;
+		height:100%;
+		column-count:3;
+		column-width:400px;
+		column-gap:0px;
+	}
+	
+	#middlebox .box img{
+		float:left;
+		border-radius:20px;
+	}
+	.box img{
+		width:200px;
+	}
+	#middlebox #box1 img{
+		width:400px;
+	}
+	#middlebox #box6 img{
+		width:400px;
+	}
+	#middlebox #box7 img{
+		width:400px;
+	}
+	
+	#middlebox .box img{
+		opacity:0.3;
+		transition:all 1s;
+	}
+	
+	#middlebox .box img:hover{
+		opacity:1;
+	}
+	
+
+</style>
+<title></title>
+
+</head>
+<body>
+
+	<div class="box" id="bigbox">
+		<div id="middlebox" class="box">
+			<div id=box1 class="box">
+				<img src="../images/cat01.jpg" alt="" />
+			</div>
+			<div id=box2 class="box">
+				<img src="../images/cat02.jpg" alt="" />
+			</div>
+			<div id=box3 class="box">
+				<img src="../images/cat03.jpg" alt="" />
+			</div>
+		</div>
+		<div id="middlebox" class="box">
+			<div id=box4 class="box">
+				<img src="../images/cat04.jpg" alt="" />
+			</div>
+			<div id=box5 class="box">
+				<img src="../images/cat05.jpg" alt="" />
+			</div>
+			<div id=box6 class="box">
+				<img src="../images/cat01.jpg" alt="" />
+			</div>
+		</div>
+		<div id="middlebox" class="box">
+			<div id=box7 class="box">
+				<img src="../images/cat02.jpg" alt="" />
+			</div>
+			<div id=box8 class="box">
+				<img src="../images/cat03.jpg" alt="" />
+			</div>
+			<div id=box9 class="box">
+				<img src="../images/cat04.jpg" alt="" />
+			</div>
+		
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+
+
+
+</body>
+</html>

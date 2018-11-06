@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+</style>
+<script>
+var cat01,cat02,cat03,cat04,cat05;
+window.onload = function(){
+	
+	cat01=document.images["cat01"];
+	
+	cat01.onmouseover = function(){
+		event.srcElement.src="../images/dog01.jpg";
+	}
+	
+};
+
+function change(num){
+	event.srcElement.src="../images/dog0"+num+".jpg"
+};
+function rechange(num){
+	event.srcElement.src="../images/cat0"+num+".jpg"
+};
+	
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	
+	<form name="form1">
+		<img src="../images/cat01.jpg" alt="" name = "cat01" onmouseover="change(1);" onmouseout="rechange(1);"/>
+		<img src="../images/cat02.jpg" alt="" name = "cat02" onmouseover="change(2);" onmouseout="rechange(2);"/>
+		<img src="../images/cat03.jpg" alt="" name = "cat03" onmouseover="change(3);" onmouseout="rechange(3);"/>
+		<img src="../images/cat04.jpg" alt="" name = "cat04" onmouseover="change(4);" onmouseout="rechange(4);"/>
+		<img src="../images/cat05.jpg" alt="" name = "cat05" onmouseover="change(5);" onmouseout="rechange(5);"/>
+	</form>
+
+
+</body>
+</html>

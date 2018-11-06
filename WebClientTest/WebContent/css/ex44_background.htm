@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+	.box{
+		width:400px;
+		margin:20px;
+		height:350px;
+	}
+	
+	#box1{
+		background-image: url("../images/catty01.png"), 
+						  url("../images/catty02.png"), /*다중배경이미지.*/
+						  url("../images/catty03.png");
+		background-repeat: 
+		/*  repeat-x,
+			repeat-y,
+			no-repeat; */
+			no-repeat;/* 이렇게 해도 세개다 적용됨. */
+							  
+		background-position:
+			right top,
+			left bottom,
+			right bottom;
+	}
+	#box2{
+		background-image:url(../images/wall01.jpg),
+						 url(../images/wall02.jpg),
+						 url(../images/wall03.jpg),
+						 url(../images/wall04.jpg),
+						 url(../images/wall05.jpg);
+		background-repeat:no-repeat;
+		background-position:
+			320px 0px,
+			240px 0px,
+			160px 0px,
+			80px 0px,
+			0px 0px;
+	}
+	
+	
+	#box3{
+		width:400px;
+		height:400px;
+		background-image:url(../images/cat01_big.jpg);
+		/* background-size:400px 400px; /* 가로 세로 */
+		/* background-size:200px 200px;   */
+		/* background-size:400px; */ /* 가로, 세로(자동계산, 종횡비 유지한채로) */
+		/*  background-size:auto,200px;   *//* 가로(자동계산 종횡비 유지한채로),세로입력 */
+		/* background-position:center center; */
+		background-size:/* contain */ cover ;
+		
+		/* 
+			contain(장축을 맞추기 - 배경이미지 모두 출력, 반복) > 영역 일부 남음
+			cover(단축을 맞추기 - 배경이미지 일부 잘림) > 영역이 모두 꽉참
+		*/	
+	}
+	
+	/*문서전체 풀사이즈 배경이미지*/
+	
+	html{
+		/* border:10px solid blue; */
+		background-image:url(../images/wall08.jpg);
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-attachment:fixed;
+		/* background-size:100% 100%; 브라우저 늘릴때마다 배경도늘어나서 X*/
+		background-size:cover;
+		
+	}
+	body{
+		/* border:10px solid ; */
+	}
+	
+	
+	
+	
+</style>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex44_background.htm -->
+	
+	<div id="box1" class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat illo accusantium ea repudiandae Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat illo accusantium ea repudiandae Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat illo accusantium ea repudiandae</div>
+	
+	<div id="box2" class="box">Nesciunt illum ad quibusdam aut esse dolores dolorem aliquam animi laboriosam commodi aperiam veritatis Nesciunt illum ad quibusdam aut esse dolores dolorem aliquam animi laboriosam commodi aperiam veritatis Nesciunt illum ad quibusdam aut esse dolores dolorem aliquam animi </div>
+	
+	<div id="box3" class="box">Similique fugiat quo deserunt dignissimos rerum accusantium numquam inventore soluta eum adipisci itaque molestiae est Similique fugiat quo deserunt dignissimos rerum accusantium numquam inventore soluta eum adipisci itaque molestiae est adipisci itaque molestiae est</div>
+	
+	
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

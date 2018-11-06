@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+/* 
+1. 태그선택자
+2. id선택자
+3. class 선택자
+4. 그룹 선택자
+----------------------------------------
+5. 자손 선택자, Descendant Selector
+	- 친자식 + 손자 + 증손자 + 고손자 +...+ 자손
+6. 자식 선택자, Child Selector
+	- 친자식
+
+ */
+ 	/*위의 홍길동만 파란색이되고싶으면??  */
+ 	/* b{color:blue;}  안됨 */
+ 	/* #name{color:blue;}  됨 */
+ 	
+ 	/* 클래스 선택자는 다른 같은 이름의 클래스가 있다고 생각해야한다.
+ 	
+ 	id,class -> 문제점 : 모든 태그에 일일이 식별자를 붙여야한다. -> 비용발생 어마어마함
+ 	  */
+	
+	/* 자손 선택자 
+		- 부모선택자 자손선택자{  }
+	*/
+	/* div b{color:orange; }
+	p b{color:blue}*/
+	
+	/* 
+	자식선택자 
+	-부모선택자 > 자식선택자 { }
+	
+	*/
+	div > span > b {color:blue;}
+	
+	/* .item{color:red;} */
+	
+	ul#list2 > li{color:blue;}
+	
+	
+	/* 테이블예제 */
+	
+	table#tbl1 >tbody > tr > td{color:blue;} /* 승리 */
+	table#tbl1 td{color:red;}
+</style>
+</head>
+<body>
+<!-- ex05_selector.htm -->
+	<h1>게시판</h1>
+	
+	<table border="1" width="600" id = "tbl1">
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		
+	</table>
+	
+	<hr>	
+	
+	<table border="1" width="600">
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>게시판 제목입니다.</td>
+			<td>2018-10-15</td>
+			<td>홍길동</td>
+			<td>11</td>
+		</tr>
+		
+	</table>
+
+	<h1>오늘의 할일</h1>
+	<ul>
+		<li class = "item">자바정리</li>
+		<li class = "item">오라클정리</li>
+		<li class = "item">jdbc정리</li>
+		<li class = "item">프로젝트정리</li>	
+	</ul>
+	
+	<hr>
+	<h1>오늘의 할일</h1>
+	<ul id ="list2">
+		<li>자바정리</li>
+		<li>오라클정리</li>
+		<li>jdbc정리</li>
+		<li>프로젝트정리</li>	
+	</ul>
+	
+	<hr>
+	
+	
+	<div>
+		<span>
+			안녕하세요 저는 <b> <!-- id="name" -->홍길동</b>입니다.
+		</span>
+	</div>
+
+
+	<p>
+		<span>
+			안녕하세요 저는 <b>홍길동</b>입니다.
+		</span>
+	</p>
+
+</body>
+</html>

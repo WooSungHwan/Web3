@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+</style>
+<script>
+
+var count1, count2;
+
+
+
+window.onload = function(){
+	count1=document.images["count1"];
+	count2=document.images["count2"];
+	
+	
+	
+	
+};
+var n1 =0;
+var n10 =0;
+/* window.onmousedown = function(){
+	n1++;
+	
+	if(n1==10){
+		n1=0;
+		n10++;
+	}
+	count2.src="../images/"+n1+".png";
+	count1.src="../images/"+n10+".png";
+}; */
+
+window.onkeydown = function(){
+	if(event.keyCode==38){
+		n1++;
+		if(n1==10){
+			n1=0;
+			n10++;
+		}
+		count2.src="../images/"+n1+".png";
+		count1.src="../images/"+n10+".png";
+	}
+	else if(event.keyCode==40){
+		n1--;
+		if(n1==10){
+			n1=0;
+			n10++;
+		}	
+		count2.src="../images/"+n1+".png";
+		count1.src="../images/"+n10+".png";
+	}
+	
+};
+	
+//바디태그에 onselectstart="return false;" 붙이면 블럭안잡힘
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body onselect="return false;">
+	<img src="../images/0.png" name="count1" />
+	<img src="../images/0.png" name="count2" />
+</body>
+</html>

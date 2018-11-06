@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+</style>
+<script>
+var option,btn1,FruitList;
+window.onload = function(){
+	option=document.all.option;
+	btn1=document.all.btn1;
+	FruitList = document.all.FruitList;
+	var count=1;
+	
+	btn1.onclick=function(){
+		var newOp = new Option();
+		
+		newOp.value=count;
+		newOp.innerText=option.value;
+		
+		FruitList.options.add(newOp);
+		
+	};
+	
+	option.onkeyup = function(){
+		if(event.keyCode==13){
+			btn1.click();
+			option.value="";
+			option.focus();
+		}
+	}
+	
+};
+	
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<select name="FruitList">
+		
+	</select>
+	
+	<hr />
+	
+	<input type="text" name="option" /> 
+	<input type="button" name="btn1" value="추가하기"/>
+</body>
+</html>

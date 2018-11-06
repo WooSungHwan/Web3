@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	td{
+		border:1px solid #A9A9A9;
+	}
+</style>
+<script>
+	var cbAll,cb;
+	var btn1,tbl1;
+
+	window.onload = function(){
+		cbAll = document.all.cbAll;//단일객체
+		cb=document.all.cb;//배열
+		
+		cbAll.onchange = function(){
+			/* if(cbAll.checked){
+				for(var i =0; i<cb.length; i++){
+					cb[i].checked=true;
+				}
+				
+			}else{
+				for(var i =0; i<cb.length; i++){
+					cb[i].checked=false;
+				}
+			} */
+			
+			for(var i =0; i<cb.length; i++){
+				cb[i].checked=!cb[i].checked;
+			}
+			
+		};
+		cb=document.getElementsByName("cb");
+		btn1= document.getElementById("btn1");
+		tbl1= document.getElementById("tbl1");
+		
+		btn1.onclick= function(){
+			//컬렉션에서 중간 요소를 추가/삭제를 할때 주의점!
+			// - 뒤의 요소들의 인덱스가 변함
+			
+			for(var i =cb.length-1; i>=0;i--){
+				if(cb[i].checked){
+					//삭제할 <tr> 찾기
+					//cb[i].parentNode.parentNode.nodeName
+					tbl1.lastChild.removeChild(cb[i].parentNode.parentNode); //테이블의 마지막자식은 tbody
+				}
+			}
+		};
+	};
+	
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex25_form.htm -->
+	
+	<h1>주소록</h1>
+	
+	<input type="button" value="체크 항목 지우기" id="btn1" />
+	<hr />
+	
+	<table id="tbl1" table="class">
+		<tr>
+			<th><input type="checkbox" name="cbAll" /></th>
+			<th>번호</th>
+			<th>이름</th>
+			<th>주소</th>
+			<th>나이</th>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>001</td>
+			<td>홍길동</td>
+			<td>서울시 강남구 역삼동</td>
+			<td>25</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>002</td>
+			<td>아무개</td>
+			<td>서울시 강남구 대치동</td>
+			<td>20</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>001</td>
+			<td>홍길동</td>
+			<td>서울시 강남구 역삼동</td>
+			<td>25</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>002</td>
+			<td>아무개</td>
+			<td>서울시 강남구 대치동</td>
+			<td>20</td>
+		</tr><tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>001</td>
+			<td>홍길동</td>
+			<td>서울시 강남구 역삼동</td>
+			<td>25</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>002</td>
+			<td>아무개</td>
+			<td>서울시 강남구 대치동</td>
+			<td>20</td>
+		</tr><tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>001</td>
+			<td>홍길동</td>
+			<td>서울시 강남구 역삼동</td>
+			<td>25</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>002</td>
+			<td>아무개</td>
+			<td>서울시 강남구 대치동</td>
+			<td>20</td>
+		</tr><tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>001</td>
+			<td>홍길동</td>
+			<td>서울시 강남구 역삼동</td>
+			<td>25</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>002</td>
+			<td>아무개</td>
+			<td>서울시 강남구 대치동</td>
+			<td>20</td>
+		</tr><tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>001</td>
+			<td>홍길동</td>
+			<td>서울시 강남구 역삼동</td>
+			<td>25</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>002</td>
+			<td>아무개</td>
+			<td>서울시 강남구 대치동</td>
+			<td>20</td>
+		</tr><tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>001</td>
+			<td>홍길동</td>
+			<td>서울시 강남구 역삼동</td>
+			<td>25</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>002</td>
+			<td>아무개</td>
+			<td>서울시 강남구 대치동</td>
+			<td>20</td>
+		</tr><tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>001</td>
+			<td>홍길동</td>
+			<td>서울시 강남구 역삼동</td>
+			<td>25</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="cb" /></td>
+			<td>002</td>
+			<td>아무개</td>
+			<td>서울시 강남구 대치동</td>
+			<td>20</td>
+		</tr>
+	</table>
+</body>
+</html>

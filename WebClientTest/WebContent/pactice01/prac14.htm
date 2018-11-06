@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false;">
+<head>
+<meta charset="UTF-8">
+<style>
+	
+</style>
+<script>
+
+window.onload = function(){
+	
+};
+window.onmousedown = function(){
+	var y=event.clientY;
+	var x =event.clientX;
+	img = document.createElement("img");
+	img.src="../images/catty01.png";
+	img.style.position="absolute";
+		
+	if(event.buttons==1){
+			
+		img.style.left = x+"px";
+		img.style.top = y+"px";
+		img.className = "cat";
+		
+		document.body.appendChild(img);
+	}
+		
+	else if(event.buttons==2){
+		document.body.removeChild(event.srcElement);
+	}
+	
+};
+
+	
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body >
+	
+	
+
+</body>
+</html>

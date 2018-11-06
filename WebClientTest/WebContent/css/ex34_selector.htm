@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+	/*
+	CSS 선택자(CSS2)
+	1. 태그선택자	2.아이디선택자(#) 3. 클래스선택자(.)		4. 자손( )		5. 자식(>)
+	6. 형제(~)			7.인접형제(+)		8. 그룹선택자(,)		9. 의사(가상)클래스(:)
+	
+	CSS선택자(CSS3)
+	
+	
+	Child 선택자    //(1~3) - ***
+	1. :first-child : 자신이 속한 집단에서(자신과 같은 부모를 가지는 항목들 중에서) 자신이 차지하는 위치가 첫째인 요소를 찾아주세요
+	2. :last-child
+	3. :nth-child(n)
+	4. :nth-last-child(n)
+	*/
+	
+	#list li{
+	/* 	color:red; */
+	}
+	#list li:first-child{ color:red; }
+	#list li:last-child{color:blue;}
+	
+	#list li:nth-child(3){color:green;}
+	#list li:nth-last-child(4){color:orange;}
+	
+	/* #tbl tr:first-child{background-color:red;}
+	#tbl tr:nth-child(5){background-color:blue;} */
+	
+	/* #tbl td:first-child{background-color:yellow;} */
+	
+	/*
+	nth-child(n), nth-last-child(n)
+	- n : 수열을 지원(패턴 검색 지원)
+	1. 2: 요소의 위치(인덱스)
+	2. 2n : 2 4 6 8 ..(짝수)행
+	3. 2n+1 : 1,3,5,7,9.. (홀수)
+	
+	4. 3n .. 7n .. 3의배수..7의배수..
+	
+	
+	
+	*/
+	
+	#tbl tr:nth-child(even) {background-color:tomato;}
+	
+	
+	#list tr:nth-child(odd) td:nth-child(even){
+		background-color:#eee;
+	}
+	#list tr:nth-child(even) td:nth-child(odd){
+		background-color:#eee;
+	}
+	
+</style>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex34_selector.htm -->
+	<h1>리스트</h1>
+	
+	<h1>테이블</h1>
+	
+	<ul id= "list">
+		<li>강아지</li>
+		<li>고양이</li>
+		<li>거북이</li>
+		<li>햄스터</li>
+		<li>토끼</li>
+		<li>기니피그</li>
+		<li>이구아나</li>
+		<li>닭</li>
+		<li>거미</li>
+		<li>뱀</li>
+	</ul>
+	
+	<h1>테이블</h1>
+	
+	<table id="tbl" class="table">
+		<tr>
+			<td>Lorem ipsum dolor.</td>
+			<td>Lorem ipsum dolor.</td>
+			<td>Lorem ipsum dolor.</td>
+			<td>Lorem ipsum dolor.</td>
+		</tr>
+		<tr>
+			<td>Perferendis voluptatem quasi?</td>
+			<td>Aperiam aut quam!</td>
+			<td>Totam perspiciatis reprehenderit.</td>
+			<td>Natus ipsa eum.</td>
+		</tr>
+		<tr>
+			<td>Quia illo et!</td>
+			<td>Iste cupiditate necessitatibus!</td>
+			<td>Illo sunt nisi.</td>
+			<td>Ipsa vero molestiae!</td>
+		</tr>
+		<tr>
+			<td>Quod corporis perferendis?</td>
+			<td>Sint ducimus consectetur?</td>
+			<td>Id tenetur dolores.</td>
+			<td>Odit nam natus.</td>
+		</tr>
+		<tr>
+			<td>Quis repudiandae dicta.</td>
+			<td>Aliquid reprehenderit aperiam?</td>
+			<td>Numquam ipsum ratione.</td>
+			<td>Sit ipsum facere!</td>
+		</tr>
+		<tr>
+			<td>Blanditiis expedita ad!</td>
+			<td>Odio perspiciatis quo.</td>
+			<td>Voluptas cupiditate repellendus.</td>
+			<td>A earum perferendis.</td>
+		</tr>
+		<tr>
+			<td>Minima sunt alias.</td>
+			<td>Impedit aut porro.</td>
+			<td>Perspiciatis eos autem.</td>
+			<td>Fuga velit at.</td>
+		</tr>
+		<tr>
+			<td>Esse distinctio voluptates.</td>
+			<td>Iste nemo temporibus.</td>
+			<td>Excepturi pariatur optio.</td>
+			<td>Minus consectetur nobis.</td>
+		</tr>
+		<tr>
+			<td>Mollitia minus corporis?</td>
+			<td>Magni molestias cumque.</td>
+			<td>Hic consequuntur doloribus!</td>
+			<td>Explicabo molestias error.</td>
+		</tr>
+		<tr>
+			<td>Sunt recusandae expedita.</td>
+			<td>Debitis sed distinctio.</td>
+			<td>Voluptate tempore nemo!</td>
+			<td>Itaque praesentium labore.</td>
+		</tr>
+		<tr>
+			<td>Id aliquam consequuntur.</td>
+			<td>Quod voluptas quia?</td>
+			<td>Saepe culpa dolorem.</td>
+			<td>Deleniti reprehenderit unde?</td>
+		</tr>
+		<tr>
+			<td>Deleniti at eius!</td>
+			<td>Doloribus tempora aperiam!</td>
+			<td>Facere ullam praesentium.</td>
+			<td>Molestias provident minima.</td>
+		</tr>
+		<tr>
+			<td>Tempore perferendis culpa?</td>
+			<td>Consequuntur blanditiis officia.</td>
+			<td>Provident tenetur eos!</td>
+			<td>Veniam modi vitae.</td>
+		</tr>
+		<tr>
+			<td>Omnis eos impedit.</td>
+			<td>Possimus esse aspernatur?</td>
+			<td>Quas earum rerum.</td>
+			<td>Nihil tempora voluptates!</td>
+		</tr>
+		<tr>
+			<td>Enim qui fuga!</td>
+			<td>Labore vel nemo.</td>
+			<td>Cupiditate aperiam nihil!</td>
+			<td>Blanditiis saepe eligendi.</td>
+		</tr>
+		<tr>
+			<td>Quisquam ratione voluptas.</td>
+			<td>Nisi maiores porro.</td>
+			<td>Assumenda dolores dolore.</td>
+			<td>Voluptas amet soluta?</td>
+		</tr>
+		<tr>
+			<td>Tenetur provident laudantium.</td>
+			<td>Nisi error officia.</td>
+			<td>Fuga beatae tenetur.</td>
+			<td>Est beatae impedit!</td>
+		</tr>
+		<tr>
+			<td>Dolorum possimus saepe.</td>
+			<td>Saepe unde officiis?</td>
+			<td>Accusantium reiciendis eaque?</td>
+			<td>Quisquam eaque veniam.</td>
+		</tr>
+		<tr>
+			<td>Dicta quo mollitia.</td>
+			<td>Ducimus quia ut!</td>
+			<td>Ab quisquam odit.</td>
+			<td>Nam reiciendis odit.</td>
+		</tr>
+		<tr>
+			<td>Laborum numquam est.</td>
+			<td>Culpa porro suscipit.</td>
+			<td>Eveniet animi eos.</td>
+			<td>Unde tenetur eligendi.</td>
+		</tr>
+	</table>
+	
+	
+	<table id="list" class="table" align="center">
+			<!-- tr>th#col$*4 -->
+			<tr>
+				<th id="col1">pic</th>
+				<th id="col2">name</th>
+				<th id="col3">info</th>
+				<th id="col4">etc</th>
+			</tr>
+			<!-- tr*7>(td>img[src=../images/man_0.png])+(td>lorem2)+(td>lorem15)+(td>lorem5) -->
+			<tr>
+				<td><img src="../images/man_01.png" alt="" /></td>
+				<td>Lorem ipsum.</td>
+				<td class="cell3">Lorem ipsum dolor sit amet, consectetur
+					adipisicing elit. Explicabo nostrum aliquam sit nesciunt distinctio
+					incidunt.</td>
+				<td>Lorem ipsum dolor sit amet.</td>
+			</tr>
+			<tr>
+				<td><img src="../images/man_02.png" alt="" /></td>
+				<td>Aspernatur iusto.</td>
+				<td class="cell3">Magni voluptas nisi quisquam dolorum vel
+					tempora hic molestiae tenetur similique et! Necessitatibus earum
+					rerum.</td>
+				<td>Neque mollitia similique dolorum rem.</td>
+			</tr>
+			<tr>
+				<td><img src="../images/man_03.png" alt="" /></td>
+				<td>Laborum eligendi.</td>
+				<td class="cell3">Eum voluptatum molestias nulla enim doloribus
+					aliquid numquam unde accusamus minus quo. Velit nihil rerum.</td>
+				<td>Blanditiis dolore veritatis consequuntur iusto.</td>
+			</tr>
+			<tr>
+				<td><img src="../images/woman_01.png" alt="" /></td>
+				<td>Similique fugit.</td>
+				<td class="cell3">Nulla minus labore aperiam provident ad
+					perferendis quaerat quos quidem numquam odio beatae commodi
+					veritatis!</td>
+				<td>Enim modi voluptate tempora provident.</td>
+			</tr>
+			<tr>
+				<td><img src="../images/woman_02.png" alt="" /></td>
+				<td>Repellat neque!</td>
+				<td class="cell3">Quaerat animi vero reiciendis rem aliquam sed
+					ea praesentium accusantium magnam. Error sequi est commodi.</td>
+				<td>Modi iure voluptatem aliquid dolorum!</td>
+			</tr>
+			<tr>
+				<td><img src="../images/woman_03.png" alt="" /></td>
+				<td>Pariatur eum.</td>
+				<td class="cell3">Minima distinctio corrupti eos animi fuga aut
+					aperiam praesentium temporibus nihil esse vero cum blanditiis.</td>
+				<td>Perferendis suscipit nobis ad iste!</td>
+			</tr>
+			<tr>
+				<td><img src="../images/man_01.png" alt="" /></td>
+				<td>Dignissimos culpa.</td>
+				<td class="cell3">Labore esse ullam fuga temporibus magnam
+					sapiente beatae et nemo voluptate voluptatem ut debitis nihil.</td>
+				<td>Libero dolores voluptas ipsum rem.</td>
+			</tr>
+		</table>
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

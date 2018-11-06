@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	#tbl1 td{
+		width:126px;
+		height:126px;
+		border:1px solid #A9A9A9;
+	}
+	#tbl1 td img{
+		display:block;
+	}
+	
+</style>
+<script>
+
+window.onload = function(){
+	
+	var cells = document.getElementsByTagName("td");
+	
+	for(var i =0; i<cells.length;i++){
+		//cells[i].onmouseover = function(){
+			//태그를 여러개 검색해서 일괄로 이벤트를 거는 경우
+			// 1. 이벤트 함수내에서는 루프변수 참조하지 말것
+			// 2. event.srcElement 사용
+			
+			//Uncaught TypeError: Cannot set property 'innerText' of undefined : cells[i]가 undefined라서 발생
+			//cells[i].innerText = "here";
+			
+		//	event.srcElement.innerText = "here";
+			
+		//};
+		
+		cells[i].onmousedown = function(){
+			if(event.buttons == 1){
+				//클릭된 <td>
+				event.srcElement.innerHTML = "<img src='../images/rect_icon01.png'/>";
+			}else if(event.buttons==2){
+				//오른쪽 버튼 : 컨텍스트 메뉴(Context Menu)
+				
+				event.srcElement.parentNode.innerHTML = "";
+			}
+			
+		};
+	}
+	
+};
+	
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body oncontextmenu="return false;">
+<!-- ex33_DOM.htm -->
+	
+	<table id="tbl1" class="table">
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	
+	
+</body>
+</html>

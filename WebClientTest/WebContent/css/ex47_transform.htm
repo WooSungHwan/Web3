@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+/*  자주쓰는 패턴 */
+#menu {
+	/* border:1px solid black; */
+	width: 630px;
+	height: 126px;
+	margin: 0px auto;
+	transform: translate(0px, -100px);
+}
+
+#menu img, #menu > div {
+float: left;
+	cursor: pointer;
+	transition:transform .7s;
+}
+#menu > div:hover {
+	transform: translate(0px, 85px);
+}
+
+/* #menu img:hover {
+	transform: translate(0px, 90px);
+} */
+/* -------------------------------------------- */
+#fmenu {
+	/* border:1px solid black; */
+	width: 630px;
+	height: 126px;
+	margin: 0px auto;
+	position: fixed;
+	/*아래에 안보이기위해서 얘를 음수줘도 된다.*/
+	bottom: 0px;
+	/* 가운데정렬을 하느 코드이자 높이를 0으로하는것 */
+	left: 0px;
+	right: 0px;
+	/*아래로 이동*/
+	transform: translate(0px, 100px);
+}
+
+#fmenu img {
+	float: left;
+	cursor: pointer;
+	transition:transform .7s;
+}
+
+#fmenu img:hover {
+	transform: translate(0px, -100px);
+}
+/* -------------------------------------------------- */
+#smenu {
+	/* border: 1px solid black; */
+	width: 126px;
+	height: 630px;
+	position: fixed;
+	transform: translate(-105px, 0px);
+}
+
+#smenu img {
+	float: left;
+	cursor: pointer;
+	margin: auto 0px;
+	transition:transform .7s;
+}
+
+#smenu img:hover {
+	transform: translate(90px, 0px);
+}
+
+/* ----------------------------------------------- */
+#menu>div>div {
+	/* position:relative;
+		left:-80px;
+		top:100px; 자기가 있던 공간을 없앨수 없어서 탈락!*/
+	position: absolute;
+	left: 25px;
+	top: 90px;
+	
+	color:white;
+	text-shadow:1px 1px 1px black;
+	background-color:rgba(255,255,255,.5);
+	padding:5px;
+	width:70px;
+	text-align:center;
+	border-radius:50%;
+}
+
+/* #menu > div:nth-child(5) > div{
+		left:540px;
+		top:100px;
+	} 이 행동을 5번(메뉴의 갯수번)해야해서 탈락 */
+#menu>div {
+	float: left;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+</style>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex47_transform.htm -->
+
+	<nav id="menu">
+		<div>
+			<img src="../images/rect_icon01.png" alt="" />
+			<div>음악</div>
+		</div>
+		<div>
+			<img src="../images/rect_icon02.png" alt="" />
+			<div>동영상</div>
+		</div>
+		<div>
+			<img src="../images/rect_icon03.png" alt="" />
+			<div>홈</div>
+		</div>
+		<div>
+			<img src="../images/rect_icon04.png" alt="" />
+			<div>QnA</div>
+		</div>
+		<div>
+			<img src="../images/rect_icon05.png" alt="" />
+			<div>고객센터</div>
+		</div>
+		<div style="clear: both;"></div>
+	</nav>
+
+	<nav id="fmenu">
+		<img src="../images/rect_icon01.png" alt="" /> <img
+			src="../images/rect_icon02.png" alt="" /> <img
+			src="../images/rect_icon03.png" alt="" /> <img
+			src="../images/rect_icon04.png" alt="" /> <img
+			src="../images/rect_icon05.png" alt="" />
+		<div style="clear: both;"></div>
+	</nav>
+
+	<nav id="smenu">
+		<img src="../images/rect_icon01.png" alt="" /> <img
+			src="../images/rect_icon02.png" alt="" /> <img
+			src="../images/rect_icon03.png" alt="" /> <img
+			src="../images/rect_icon04.png" alt="" /> <img
+			src="../images/rect_icon05.png" alt="" />
+		<div style="clear: both;"></div>
+	</nav>
+
+	<section style="width: 900px; margin: 0px auto;">
+		<h1>Lorem ipsum dolor sit amet.</h1>
+		<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Maiores optio.</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Deleniti facere mollitia perspiciatis non similique sint magni
+			voluptatem dolorem repellat porro provident rem eos vel assumenda
+			vitae facilis excepturi praesentium. Labore?</p>
+		<p>Consequatur libero omnis vero soluta vel qui atque facere
+			adipisci praesentium dolore dicta reprehenderit unde veritatis
+			consequuntur nesciunt deleniti placeat eum accusantium assumenda
+			maxime consectetur temporibus asperiores voluptatem numquam aut?</p>
+		<p>Sequi deserunt eius est necessitatibus reprehenderit minima ex
+			aliquid totam nisi omnis placeat autem debitis voluptatem porro
+			voluptatibus! Labore voluptatum tempora quae facere debitis
+			laboriosam rerum excepturi quidem quia facilis.</p>
+		<p>Laboriosam a explicabo assumenda placeat officiis ut
+			perspiciatis quam nam dignissimos facilis qui eius dolor nisi
+			temporibus quae expedita libero natus sunt pariatur doloremque animi
+			itaque voluptate dolores at eveniet.</p>
+		<p>Iste incidunt veniam aliquam molestiae impedit numquam nostrum
+			quae voluptatibus optio vel fuga cum ut atque vitae facere velit esse
+			consectetur! Blanditiis itaque neque fuga sit et vero distinctio
+			quaerat.</p>
+		<h2>Et repellat molestias numquam veniam debitis libero illo
+			aspernatur eaque!</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Exercitationem quae maxime similique sed repellendus repudiandae
+			quidem accusamus amet sint rerum nam necessitatibus unde nostrum
+			ducimus inventore vero nisi delectus. Repellat.</p>
+		<p>Accusantium nihil cumque totam aliquid ex laborum atque.
+			Pariatur voluptatem esse magni quaerat a cumque fugit reiciendis ut
+			laudantium consequatur repudiandae dolorem reprehenderit autem animi
+			sint impedit modi eaque delectus.</p>
+		<p>Inventore voluptatibus dolores nobis perspiciatis velit eius
+			nemo officia veritatis cum odio omnis minima ipsam nulla dolor
+			numquam maxime aliquam provident minus explicabo aperiam. Sequi
+			delectus ipsa distinctio asperiores dicta.</p>
+		<p>Praesentium fuga voluptas unde ex dicta cupiditate sit deserunt
+			repudiandae ipsa at alias qui veritatis officiis nesciunt tenetur
+			nobis esse debitis cumque dolor reprehenderit quia vel provident
+			sapiente animi amet.</p>
+		<p>Aliquid at mollitia laborum impedit beatae fuga est et eius
+			suscipit totam. Iusto minus quos deserunt accusamus molestias ipsa
+			nulla mollitia quam quod odit. A sint veniam aspernatur expedita vel.</p>
+		<h2>Magni alias modi a quidem aut labore officia. Quibusdam
+			dicta.</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Libero dicta labore illum et itaque quas iste quaerat commodi harum
+			eligendi explicabo consectetur amet distinctio sequi aspernatur
+			possimus sunt quibusdam laboriosam.</p>
+		<p>Aspernatur sit blanditiis nisi adipisci quae nam repellat
+			temporibus delectus perspiciatis rerum maxime est molestiae fugit
+			voluptate minima praesentium minus qui dicta dolores illum ea tempore
+			similique voluptatum nihil atque?</p>
+		<p>Magnam et neque atque ab quis quasi voluptatem temporibus totam
+			aspernatur architecto dignissimos quidem consectetur vel debitis
+			aliquid id deserunt amet illum at possimus. Ab facilis enim
+			dignissimos accusamus aliquid.</p>
+		<p>Eius quis amet nemo nihil incidunt ipsa blanditiis numquam
+			deleniti obcaecati corporis aspernatur perspiciatis odio quisquam
+			ullam cupiditate officiis sequi facere maiores earum nesciunt. Facere
+			dicta esse fuga molestias sunt.</p>
+		<p>Excepturi error est velit eos nulla commodi debitis facilis
+			aliquid maiores quisquam voluptatum voluptates odio nobis rem
+			consequuntur eligendi consectetur deleniti tempore. Amet vero rerum
+			excepturi temporibus ducimus corporis rem!</p>
+		<h2>Totam amet fuga dicta voluptates qui tempora nam cumque ea.</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+			provident rerum repellat eveniet id consectetur quaerat accusantium
+			perspiciatis nihil eos dicta animi aspernatur enim voluptatem non
+			quisquam rem iusto dolore.</p>
+		<p>Aliquid qui molestias porro a reprehenderit nihil iste
+			veritatis dolor cupiditate quaerat obcaecati tempore consectetur
+			illum atque facilis fugit sequi neque numquam nemo laboriosam eum.
+			Itaque hic amet molestias facere?</p>
+		<p>Maiores voluptatem dolor explicabo consectetur alias
+			perferendis unde adipisci ex maxime dolores illo expedita veritatis
+			reiciendis placeat id sint impedit quia. Illum laborum repudiandae
+			dolore ipsam nam enim nisi fugit.</p>
+		<p>Dolorem ratione adipisci veniam nostrum reiciendis blanditiis
+			quae molestiae pariatur numquam itaque ipsa illo iste ut! Iste ad
+			quaerat nam cupiditate facilis earum qui odio eos velit minus
+			possimus omnis.</p>
+		<p>Sapiente vel rerum nostrum ipsa dolores doloribus nisi autem
+			eius sit perspiciatis aspernatur deleniti repellat explicabo saepe
+			velit omnis nesciunt dignissimos quae optio ea. Perspiciatis
+			architecto reprehenderit ipsum quis. Esse.</p>
+		<h2>At eaque in quo fuga impedit accusantium vitae distinctio
+			doloribus!</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			Officia id debitis aperiam nulla assumenda cum sapiente!
+			Reprehenderit quidem provident cupiditate delectus consequatur
+			temporibus labore soluta debitis! Quas quidem reiciendis numquam.</p>
+		<p>Illum labore numquam itaque minima nemo laboriosam provident
+			voluptate similique? Laudantium facilis magnam error saepe facere
+			quasi voluptate quas harum inventore perspiciatis earum cumque
+			tenetur dolore tempore quis? Repellat saepe!</p>
+		<p>Nesciunt ratione molestiae enim nisi vel quos incidunt sunt
+			tenetur aut cumque aspernatur aperiam ipsam facere delectus voluptate
+			sequi magni assumenda rem. Culpa deserunt ipsa sed atque minus sit
+			perferendis?</p>
+		<p>Magnam cum neque dignissimos commodi quae aliquam a culpa
+			tenetur iste explicabo eligendi doloremque? Fugit natus quaerat
+			debitis quae optio sed est provident. Assumenda ratione ipsa
+			accusantium in doloribus error!</p>
+		<p>Corrupti debitis iste quisquam veritatis esse ducimus provident
+			minus possimus saepe praesentium nostrum est aut officia quo nesciunt
+			tempore voluptatem inventore illum nam blanditiis quasi sit
+			consequatur exercitationem laborum adipisci.</p>
+	</section>
+
+
+	<!-- <nav id = "menu">
+		<img src="../images/rect_icon01.png" alt="" />
+		<img src="../images/rect_icon02.png" alt="" />
+		<img src="../images/rect_icon03.png" alt="" />
+		<img src="../images/rect_icon04.png" alt="" />
+		<img src="../images/rect_icon05.png" alt="" />
+	</nav> -->
+</body>
+</html>

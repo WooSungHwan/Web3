@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	.box{
+		width:700px;height:200px;margin:20px;
+	}
+	
+	#box1{
+		/* solid color: 단색 */
+		/* background-color:tomato; */
+		
+		/* linear-gradient(시작색깔,..,끝색깔) 위에서 아래] */
+		background:linear-gradient(white,#aaa);
+	}
+	#box2{
+		/* background:linear-gradient(red,yellow); */
+		/* background:linear-gradient(to right,red,yellow); */
+		/* background:linear-gradient(to left,red,yellow); */
+		/* background:linear-gradient(to bottom right,red,yellow); */
+		background:linear-gradient(0deg,red,yellow);/* 27도만큼 꺽어서해라 0: 아래에서 위로올라감*/
+	}
+	
+	#box3{
+		background:linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet);
+	}
+	#box4{
+		background:linear-gradient(to right,white,#ccc,#ccc,#ccc,white);
+	}
+	
+	#box5{
+		background:radial-gradient(red,yellow,green,blue);
+	}
+	#box6{
+		background:radial-gradient(circle,red,yellow,green,blue);/* 무조건 정원을 만들어준다. */
+	}
+	
+	
+</style>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex45_background.htm -->
+	
+	
+	
+	<div id="box1" class="box"></div>
+	<div id="box2" class="box"></div>
+	<div id="box3" class="box"></div>
+	<div id="box4" class="box"></div>
+	<div id="box5" class="box"></div>
+	<div id="box6" class="box"></div>
+	
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<!-- ex21_form.htm -->
+	<!-- 
+		<form> , 폼태그
+		- 입력 양식
+		- 클라이언트(사용자)로부터 여러가지 입력 양식을 통해서 데이터 입력 -> 서버로 전송
+		
+		1. <form>태그
+			- 스스로 렌더링 결과를 만들지 않는다.(화면에 안보임)
+			- 모든 입력 양식의 부모역할(***)
+			
+			a. action 속성
+				-폼 내부에 입력값들 전송하는(받는사람) 서버측 URL
+				-수신 작업을 하는 프로그램 주소(URL). Servlet, JSP , SPRING
+		
+			b. method 속성 (default = get)
+				- 서버로 데이터를 전송하는 방식
+				- post 방식 : <form method = "post"> 유일!!!!
+				- get 방식 : <form method ="get"> & 링크 & URL 직접 & 자바스크립트 등등
+				1. get
+					- URL의 끝에 데이터를 첨부해서 전송하는 방식(까라 방식)
+					- ex21_ok.jsp?name=우성환&age=25 
+					- name=우성환&age=25 : Query String
+					- 수신측 URL / ? / 전송하는데이터
+					- name=우성환&age=25
+					- 키=값&키=값&키=값&키=값&키=값 (get방식 패턴)
+					- 문제점 : 항상 노출이 된다.(보안중요한 데이터 사용 금지)
+					- 문제점 : URL 최대 256자까지(오버플로우 : 데이터 잘림)
+					- 문제점 : URL은 인코딩 방식이 base64(한글포함X)
+					- 되도록 영문과 숫자 정도만 전송
+				2. post
+					- 패킷의 본문안에 데이터를 넣어서 전송하는 방식(FM 제대로된 방식)
+					- 데이터 노출이 없음(보안상 조금.. 더 안전)
+					- 제한 크기 무제한
+					- 한글 상관없이 전송
+				
+				
+				
+				
+	 -->
+	
+	<h1>데이터 입력</h1>
+	
+	<form action ="ex21_ok.jsp" method="post">
+		이름 : <input name = "name"><br>
+		나이 : <input name ="age"><br>
+		<input type ="submit" value="입력하기">
+	</form>
+	<br><hr>
+	<a href = "ex21_ok.jsp">페이지 이동하기</a>
+	
+	
+	<hr>
+	
+	<!-- https://search.naver.com/search.naver
+	?
+	where=nexearch
+	&
+	sm=top_hty
+	&
+	fbm=1
+	&
+	ie=utf8
+	&
+	query=%EC%9E%90%EB%B0%94 -->
+	
+	<h1>네이버 검색</h1>
+	<form action = "https://search.naver.com/search.naver" method = "get">
+		검색어 : <input name ="query"> <br>
+		<input type = "submit" value="검색하기">
+	 </form>
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

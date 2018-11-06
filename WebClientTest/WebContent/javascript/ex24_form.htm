@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	form > div{
+		margin:5px 0px;
+	}
+	form > div > label{
+		margin-right:20px;
+	}
+</style>
+<script>
+var jumin1,jumin2;
+var form1;
+var isCheck = false; // 아이디 중복검사 버튼을 눌러서 검사를 했는지 나타내는 값.
+
+window.onload = function(){
+	jumin1 = document.all.jumin1;
+	jumin2 = document.all.jumin2;
+	form1=document.form1;
+	
+	jumin1.onkeyup = function(){
+		//console.log(jumin1.value.length);
+		if(jumin1.value.length==6){
+			jumin2.focus();
+		}
+	};
+	
+	form1.btnSend.onclick= function(){
+		
+		//유효성 검사
+		
+		//이름
+		// - 필수값
+		if(form1.txtName.value==""){
+			alert("이름을 반드시 입력하세요.");
+			form1.txtName.focus();
+			return;
+		}
+		
+		//나이 
+		//- 필수값
+		//- 숫자만
+		//- 19~60세
+		if(form1.txtAge.value==""){
+			alert("나이를 반드시 입력하세요.");
+			form1.txtAge.focus();
+			return;
+		}
+		
+		if(isNaN(form1.txtAge.value)){
+			alert("숫자만 입력해주시기 바랍니다.");
+			//form1.txtAge.value="";
+			//form1.txtAge.focus();
+			form1.txtAge.select();
+			return;
+		}
+		
+		//alert(typeof form1.txtAge.value);
+		if(form1.txtAge.value<19||form1.txtAge.value>60){
+			alert("나이는 19세 이상 60세 이하만 가능합니다.");
+			form1.txtAge.select();
+			return;
+		}
+		
+		//아이디
+		//자바스크립트의 전역 멤버(변수,메소드)는 자동으로 window 객체의 멤버가 된다.
+		//alert(isCheck);
+		//alert(window.isCheck);
+		/* if(!isCheck){
+			alert("아이디 중복검사를 하세욧!!!!");
+			return;
+		} */
+		
+		//암호 확인
+		if(form1.txtPW.value!=form1.txtPWC.value){
+			alert("암호가 일치하지 않습니다.");
+			form1.txtPW.value="";
+			form1.txtPWC.value="";
+			form1.txtPW.focus();
+			return;
+		}
+		
+		
+		
+		
+		//유효성 검사 통과
+		form1.submit();
+		
+	};
+	
+	form1.btnCheck.onclick = function(){
+		window.open("ex24_idcheck.htm","idcheck","width=300, height=200");
+	};
+	
+	form1.txtID.onchange = function(){ //입력이 끝나야 발생함.
+		//alert("test");
+		isCheck=false;
+		
+		
+	};
+	
+	
+};//onload;
+function togglePW(){
+	if(form1.txtPW.type=="password"){
+		form1.txtPW.type="text";
+		event.srcElement.innerText="[암호 감추기]";
+	}else{
+		form1.txtPW.type="password";
+		event.srcElement.innerText="[암호 보이기]";
+	}
+	
+};
+
+</script>
+<title></title>
+</head>
+<body>
+	<!-- ex24_form.htm -->
+	
+	<h1>주민 등록 번호</h1>
+	
+	<input type="text" name="jumin1" size="6" maxlength="6" />
+	-
+	<input type="text" name="jumin2" size="6" maxlength="7" />
+	
+	
+	
+	<h1>유효성 검사</h1>
+	
+	<form action="ex24.ok.jsp" name="form1">
+		<div>
+			<label for="txtName">이름</label>
+			<input type="text" name="txtName" id ="txtName" value="홍길동">
+		</div>
+		<div>
+			<label>나이</label>
+			<input type="text" name="txtAge" id ="txtAge" value="25">
+			
+		</div>
+		<div>
+			<label for="">
+				아이디
+				<input type="text" name ="txtID" id="txtID" />
+			</label>
+			<input type="button" value="아이디 중복검사" name="btnCheck"/>
+		</div>
+		<div>
+			<label for="">
+				암호
+				<input type="password" name ="txtPW" id="txtPW" />
+				<span style="cursor:pointer;" onclick="togglePW();">[암호 보이기]</span>
+
+			</label>
+		</div>
+		<div>
+			<label for="">
+				암호확인
+				<input type="password" name ="txtPWC" id="txtPWC" />
+			</label>
+		</div>
+		<div>
+			<input type="button" value="등록하기" name="btnSend" />
+		</div>
+		
+	</form>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

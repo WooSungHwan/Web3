@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</style>
+<script>
+
+
+
+
+
+
+
+
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex13_review.htm -->
+	
+	<!-- 
+	CSS 동작 순서
+	1. 태그 검색(선택자 사용)
+	2. 1의 결과에 서식을 적용
+	
+	JacaScript 동작 순서
+	
+	1. 이벤트 추가
+		a. 특정 태그 검색
+			- 이벤트를 걸고 싶은 태그 검색
+			- BOM 사용(window.document.form1.btn1)
+			- DOM 사용(document.getElementById("btn1");
+		
+		b. onXXX 매핑(Event Mapping)
+	
+	2. 이벤트 핸들러(이벤트에 걸린 실행 함수)
+		a. 특정 태그 검색
+			- 조작을 하고 싶은 태그 검색
+			- BOM 사용
+			- DOM 사용
+		b. 속성(PCDATA)을 조작
+			- HTML이 제공하는 속성명을 그대로 자바스크립트에서도 프로퍼티로 제공한다.
+			
+			
+			
+			
+			
+			
+			
+	
+	
+	 -->
+	
+	<form name="form1">
+		<input type="text" name="txt1" /><br>
+		<input type="button" name = "btn1" value="버튼1" />
+		<input type="button" name = "btn2" value="버튼2" onclick="test();"/>
+	</form>
+	
+	
+	<script>
+		//BOM 도구 > 1. a 이벤트를 걸 태그를 검색
+		//			 2. b 원하는 종류의 이벤트 추가하기
+		window.document.form1.btn1.onclick= function(){
+			/* console.log(1+1); 이런거 무의미 */
+			
+			var now = new Date();//현재시간 구하고
+			
+			// 화면에 출력을 하고싶다?
+			// 2.a 조작하고 싶은 태그 검색 + BOM
+			// 2.b 조작하고 싶은 태그의 속성을 제어
+			window.document.form1.txt1.value = now.toLocaleString(); 
+		};
+		
+		function test(){
+			var now = new Date();
+			
+			window.document.form1.txt1.value=now.toLocaleString();
+		};
+		
+	</script>
+	
+	
+	
+	
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

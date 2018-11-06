@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+	/*선택자 충돌: 동일한 표현의 선택자를 1회 이상 선언해도 상관없다.(비권장)*/	
+	/* div {color:red;}
+	div {font-style:italic;} */
+	
+	/*속성 충돌*/ /* 나중에 쓴놈이 이긴다.(덮어쓰기개념?) */
+	/* 동일한속성이 반복되면 마지막 적용한 속성이 화면에 출력 - 덮어쓰기 */
+	/* div{color : blue;} 
+	div {color : red;} */
+	
+	/* 속성 충돌 :여러개의 선택자가 1개의 태그에 적용되는 경우 (아주흔함) > 속성 충돌 발생*/
+	/* .box{font-size:3rem;} */
+	/* 
+	선택자 우선순위
+	- 서로다른 선택자가 하나의 태그에 같은속성을 적용했을 때 누구를 적용할지 -> 우선순위
+	
+	우선순위 점수 계산 방식
+	- 점수의 합이 높은 선택자가 적용...
+	
+	1. 태그 : 1점
+	-----------------
+	2. 클래스 : 10점
+	-----------------
+	3. id : 100점
+	
+	
+	 */
+	
+	/* 
+	상자1 접근할때
+	1. div{} 					-1
+	2. div.box{}				-11
+	3. box{}					-10
+	4. div#box1{}				-101
+	5. #box1{}					-100
+	6. div#box1.box{}			-111
+	7. #box1.box{}				-110
+	 */
+	
+	div div#box1.box{color:green;}
+	div#box1.box {color:red;}
+	div{color:blue;}
+	
+</style>
+</head>
+<body>
+	<!-- ex08_selector.htm -->
+	
+	<div>
+		<div class="box" id ="box1">상자1</div>
+		<div>상자2</div>
+		<div class="box">상자3</div>
+	</div>
+	
+</body>
+</html>

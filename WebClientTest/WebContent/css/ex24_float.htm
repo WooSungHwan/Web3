@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+/*
+		float 
+		-기존 출력 형태를 깨고, 기존의 위치에서 벗어나 원래 라인의 좌측 끝이나 우측 끝으로이동하라.
+	*/
+#pic {
+	float: left;
+	margin: 20px 10px;
+}
+
+#word {
+	color: red;
+	font-weight: bold;
+	float: left;
+}
+
+h1, p {
+	width: 600px;
+}
+
+h1 {
+	border-bottom: 1px solid gray;
+}
+
+h1>span {
+	font-size: 14px;
+	font-weight: normal;
+	/* border: 1px solid red;
+		text-align:right;
+		display:block;
+		width:430px; */
+	float: right;
+	margin-top: 15px;
+}
+
+/* 
+	블럭태그를 가로로 배치
+	1. display : inline(inline-block)
+	2. float : left(right) *******
+	 */
+.box {
+	border: 5px solid gray;
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+#box1 {
+	background-color: red;
+}
+
+#box2 {
+	background-color: orange;
+}
+
+#box3 {
+	background-color: yellow;
+}
+
+#box4 {
+	background-color: green;
+}
+
+#box5 {
+	background-color: blue;
+}
+#pet > img{
+	border:1px solid black;
+	float:left;
+}
+
+
+</style>
+<title></title>
+</head>
+<body>
+	<!-- ex24_float.htm -->
+
+	<h1>
+		회사 소개<span>관리자에게 연락하기</span>
+	</h1>
+
+	<p>
+		<img src="../images/man_04.png" id="pic"> 제주출입국청은 난민법상 난민 인정요건을
+		충족하지는 못했으나 강제추방할 경우 생명, 신체에 위협을 받을 위험이 있는 예멘인 339명에 대해 엄정한 절차를 거쳐 이날
+		난민법 제2조 제3호에 따라 인도적 체류를 허가했다. 이들에게 부여한 체류 허가 기한은 모두 1년이다. 제주도 출도 제한조치도
+		해제된다. 이로써 지난달 14일 같은 허가를 받은 23명을 <span id="word">포함해</span> 예멘인 국내 인도적
+		체류자는 362명으로 늘어났다. 인도적 체류허가를 받았더라도 향후 예멘 국가정황이 호전되거나 국내외 범죄사실이 발생 또는
+		발견될 경우에는 체류허가 취소 또는 이에 상응하는 조치가 취해진다. 출도제한 조치 해제 후에는 체류지 변경시 새로운 체류지를
+		관할하는 출입국·외국인 관서에 신고해야 하며 이를 위반할 경우 출입국관리법에 따라 처벌될 수 있다. 이에 따라 향후 이들이
+		내륙으로 이동하더라도 체류지는 파악할 수 있다고 출입국청은 설명했다. 예멘 내전 상황에도 불구하고 제3국에서 출생한 뒤
+		그곳에서 계속 살아왔거나 외국인 배우자가 있는 등 제3국에서 안정적으로 정착할 수 있어 경제적 목적으로 난민 신청한 것으로
+		판단되는 자, 범죄혐의 등으로 국내 체류가 부적절한 자 등 34명은 단순 불인정 결정됐다. 이들이 이의신청이나 행정소송을
+		제기할 경우 절차 종료 때까지 국내에 체류할 수 있으나, 출도제한 조치는 유지된다. 85명은 결정이 보류됐다. 이들은
+		어선원으로 취업해 조업 중이거나 일시 출국해 면접하지 못한 16명과 추가 조사가 필요하다고 판단된 59명 등이다. 보류자
+		중에는 난민법상 난민 인정 타당성이 있는 사람도 일부 있으며, 최대한 신속하게 면접 또는 추가 조사를 마무리해 조만간 보류자에
+		대한 결정을 내리겠다고 제주출입국청은 밝혔다.
+	</p>
+
+	<h1>상자(float 사용이 가장 많음)</h1>
+
+	<div id="box1" class="box">상자1</div>
+	<div id="box2" class="box">상자2</div>
+	<div id="box3" class="box">상자3</div>
+	<div id="box4" class="box">상자4</div>
+	<div id="box5" class="box">상자5</div>
+	<div style="clear: left;"></div>
+	<p>다른 내용입니다.</p>
+
+	<hr />
+
+	<h1>애완 동물</h1>
+
+	<div id="pet">
+
+		<img src="../images/cat01.jpg" />
+		<img src="../images/cat02.jpg" /> 
+		<img src="../images/cat03.jpg" /> 
+		<img src="../images/cat04.jpg" /> 
+		<img src="../images/cat05.jpg" />
+		<div style="clear:both;"></div>
+	
+	</div>
+	<div>추같내용입니다.</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

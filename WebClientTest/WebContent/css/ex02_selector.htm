@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+	/*<style 태그 : CSS 적용하기 위해서 만들어진 태그 */
+	/* CSS 영역 > CSS文法문법 */
+	/* 
+		CSS 버전
+		1. CSS1(1995)
+		2. CSS2(1998) : 현재 웹
+		3. CSS3(2015)
+	 */
+	 /* 
+	 	CSS 문법
+	 	
+	 	- 선택자 {속성명 : 값;}
+	 	   selector{attribute: value;}
+	 	
+	 	- 선택자 {속성명 : 값; 속성명 : 값; 속성명 : 값;....}
+				 	   
+	 	- 선택자 {
+	 		속성명 : 값; 
+	 		속성명 : 값; 
+	 		속성명 : 값;....
+	 	}
+	 	
+	 	선택자
+	 	- 태그를 검색하는 도구
+	 	- 태그를 선택자를 통해 검색하면 찾은 태그의 속성과 값을 적용한다.
+	 	- 태그를 찾는다 -> 속성(서식)을 선택(정한다.) -> 정해진 속성의 값을 적용
+	 	- 1개 검색 or 여러개 검색 -> 속성을 일괄 적용한다.(루프)
+	  */
+	  
+	  /* CSS선택자 종류 */
+/* 
+	  1. 태그선택자
+	   -태그명을 그대로 사용해서 원하는 태그를 검색한다.
+	  
+	  
+	    
+*/
+/* <h1>태그를 찾자 */
+	  h1{
+	  	color:red;
+	  }
+/* <div>태그를 찾자 */	  
+	  div{
+	  	color:blue;
+	  }
+/* <div>태그를 찾자 */
+	 p{
+	 	color : green;
+	 }	  
+	 input{
+	 	color : tomato;
+	 }
+	 textarea{color:cornflowerblue;}
+	 body{
+	 	color : skyblue;
+	 }
+</style>
+</head>
+<body>
+	<!-- ex02_selector.htm -->
+	
+	<p> p태그입니다. </p>
+	<div> div태그입니다. </div>
+	<span> span태그입니다. </span>
+	<div> div태그입니다. </div>
+	<div> div태그입니다. </div>
+	<h1> h1태그입니다. </h1>
+	<span> span태그입니다. </span>
+	<p> p태그입니다. </p>
+	<input type ="text"><br>
+	<textarea></textarea><br>
+	
+</body>
+</html>

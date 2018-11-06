@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+/*
+	정렬, Alignment
+	-인라인 태그와 블럭 태그의 수평정렬
+	
+	1. 인라인 태그의 수평정렬
+		-내용물 수평정렬 불가능.
+		-내용물의 크기와 컨테이너 크기가 같기때문에.
+		-스스로의 위치정렬 수단? 없다.(인라인 성격 파괴)
+		-부모가 정렬한다.(이미 부모태그는 반드시 블럭 태그이어야 한다.(너비100%))
+	
+	2. 블럭 태그의 수평정렬
+		-수평정렬이 없음. -> 너비가 100%이기 때문에
+	
+	*/
+#box1 {
+	text-align: center;
+}
+
+#span3 {
+	text-align: center;
+}
+
+#pbox {
+	background: yellow;
+	padding: 20px;
+}
+
+#box {
+	background: red;
+	width: 200px; /* 
+		margin-left: auto;
+		margin-right: auto; */
+	margin: 0px auto;
+}
+</style>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex29_alignment.htm -->
+
+	<div id="box1">
+		<span id="span1">인라인1</span> <span id="span2">인라인2</span>
+	</div>
+
+	<span id="span3">인라인3</span>
+
+	<hr />
+	<div id="pbox">
+		<div id="box">상자</div>
+
+	</div>
+
+	<hr />
+
+	<table class="table" style="width:300px; margin:0px auto;" >
+		<tr>
+			<th>no</th>
+			<th>name</th>
+			<th>description</th>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>test</td>
+			<td>aaaa.</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>test</td>
+			<td>aaaa.</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>test</td>
+			<td>aaaa.</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>test</td>
+			<td>aaaa.</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>test</td>
+			<td>aaaa.</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>test</td>
+			<td>aaaa.</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>test</td>
+			<td>aaaa.</td>
+		</tr>
+	</table>
+	
+	<div>다른 내용입니다.</div>
+	<div>다른 내용입니다.</div>
+	<div>다른 내용입니다.</div>
+	<div>다른 내용입니다.</div>
+	<div>다른 내용입니다.</div>
+	<div>다른 내용입니다.</div>
+	<div>다른 내용입니다.</div>
+	
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

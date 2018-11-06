@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+	body{
+		text-align:center;
+	}
+	#ttt{
+		
+		border:1px solid black;
+		width:100%;
+		
+	}
+	div{
+		float:left;
+		display:block;
+		text-align:center;
+		margin:10px auto;
+	}
+</style>
+<script>
+var sel1,sel2,btnAdd,btnRemove,btnAddAll,btnRemoveAll;
+window.onload = function(){
+	sel1=document.all.sel1;
+	sel2=document.all.sel2;
+	btnAdd=document.all.btnAdd;
+	btnRemove=document.all.btnRemove;
+	btnAddAll=document.all.btnAddAll;
+	btnRemoveAll=document.all.btnRemoveAll;
+	
+	btnAdd.onclick = function(){
+		var newOp = new Option(); 
+		var selectedOp = sel1.options[sel1.selectedIndex];
+		
+		newOp.value=selectedOp.value;
+		newOp.text=selectedOp.text;
+		
+		sel2.options.add(newOp);
+		sel1.options.remove(selectedOp.index);
+	};
+	
+	btnRemove.onclick = function(){
+		var newOp = new Option();
+		var selectedOp = sel2.options[sel2.selectedIndex];
+		
+		newOp.value=selectedOp.value;
+		newOp.text=selectedOp.text;
+		
+		sel1.options.add(newOp);
+		sel2.options.remove(selectedOp.index);
+		
+	};
+	
+	btnAddAll.onclick = function(){
+		for(var i =0; i<sel1.options.length; i++){
+			var newOp = new Option();
+			
+			newOp.value = sel1.options[i].value;
+			newOp.text = sel1.options[i].text;
+			
+			sel2.options.add(newOp);
+		}
+		var count=sel1.options.length;
+		for(var i =0; i<count;i++){
+			sel1.options.remove(0);
+		}
+		
+	};
+	
+	btnRemoveAll.onclick = function(){
+		for(var i =0; i<sel2.options.length; i++){
+			var newOp = new Option();
+			
+			newOp.value = sel2.options[i].value;
+			newOp.text = sel2.options[i].text;
+			
+			sel1.options.add(newOp);
+		}
+		var count=sel2.options.length;
+		for(var i =0; i<count;i++){
+			sel2.options.remove(0);
+		}
+	}
+};
+function adda(){
+	var newOp = new Option();
+	var selectedid=sel1.selectedIndex;
+	
+	newOp.value=sel1.options[selectedid].value;
+	newOp.text=sel1.options[selectedid].text;
+	
+	sel2.options.add(newOp);
+	sel1.options.remove(selectedid);
+};
+
+function addb(){
+	var newOp = new Option();
+	var selectedid=sel1.selectedIndex;
+	
+	newOp.value=sel2.options[selectedid].value;
+	newOp.text=sel2.options[selectedid].text;
+	
+	sel1.options.add(newOp);
+	sel2.options.remove(selectedid);
+};
+	
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<div id ="ttt">
+	<div>
+		<select name="sel1" size="10" style="height:200px; width:100px;" ondblclick="adda();">
+			<option value="1">강한님</option>
+			<option value="2">권승도</option>
+			<option value="3">김경빈</option>
+			<option value="4">김용기</option>
+			<option value="5">김용식</option>
+		</select>
+	</div>
+		
+	<div>
+		<input type="button" value ="Add >" name="btnAdd"/><br>
+		<input type="button" value ="< Remove" name="btnRemove"/><br>
+		<input type="button" value ="Add All >" name="btnAddAll"/><br>
+		<input type="button" value ="< Remove All" name="btnRemoveAll"/>
+	</div>
+	<div>	
+		<select name="sel2" size="10" style="height:200px; width:100px;" ondblclick="addb();">
+			
+		</select>
+	
+	
+	
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+div {
+	border: 1px solid black;
+	margin: 0px auto;
+	overflow: hidden;
+	float: left;
+}
+
+.btn {
+	float: left;
+	width: 80px;
+	margin: 10px;
+}
+#form1{
+	border:1px solid black;
+	margin: 0px auto;
+	overflow: hidden;
+	float: left;
+}
+#box {
+	width: 100px;
+}
+</style>
+<script>
+	var btn1, btn2, btn3, btn4, btn5, showImg;
+	var child
+	window.onload = function() {
+		showImg=document.images["showImg"];
+	};
+	
+	function changeImg(num){
+		showImg.src="../images/dog0"+num+".jpg";
+	};
+	
+	function openImg(num){
+		child=window.open("../images/dog0"+num+"_big.jpg","dog","width=1400,height=1050");
+	};
+	
+	
+</script>
+<title></title>
+</head>
+<body>
+
+	<form action="" name ="form1" id ="form1">
+		<div id="box">
+			<input 
+				type="button" name="btn1" value="강아지01" class="btn" onmouseover="changeImg(1);" onclick="openImg(1);"/> <input
+				type="button" name="btn2" value="강아지02" class="btn" onmouseover="changeImg(2);" onclick="openImg(2);"/> <input
+				type="button" name="btn3" value="강아지03" class="btn" onmouseover="changeImg(3);" onclick="openImg(3);"/> <input
+				type="button" name="btn4" value="강아지04" class="btn" onmouseover="changeImg(4);" onclick="openImg(4);"/> <input
+				type="button" name="btn5" value="강아지05" class="btn" onmouseover="changeImg(5);" onclick="openImg(5);"/>
+		</div>
+	
+		<img src="../images/dog01.jpg" alt="" name="showImg" />
+		
+
+
+	</form>
+
+</body>
+</html>
