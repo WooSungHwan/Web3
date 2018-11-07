@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body{
+	transition:all 0.5s;
+}
+	nav{
+		border:0px solid black;
+		width:630px;
+		margin:0 auto;
+		transform : translate(0px,-100px);
+	}
+	
+	img{
+		float:left;
+		transition:all .5s;
+		cursor : pointer;
+	}
+	/* nav img:hover{
+		transform:translate(0px,90px);
+	} */
+	
+</style>
+<script>
+var item;
+var now = -1;
+
+window.onload = function(){
+	//#A67F62
+	//#BE4F3B
+	//#E7C758
+	//#666666
+	//#63AFD1
+	
+	img = document.getElementsByTagName("img");
+	
+	for(var i =0; i<img.length; i++){
+		img[i].addEventListener("click",function(){
+			
+			//translate(0px, 90px)
+			//console.log(event.srcElement.style.transform);
+			if(event.srcElement.style.transform!="translate(0px, 90px)"){
+				//모든애들 원위치
+				for(var i =0; i<img.length; i++){
+					img[i].style.transform="translate(0px,0px)";
+				}
+				//선택메뉴만 아래로
+				event.srcElement.style.transform = "translate(0px,90px)";
+				document.body.style.backgroundColor=event.srcElement.dataset["color"];
+			}else{
+				//펼쳐진 메뉴를 다시 클릭
+				//선택메뉴만 아래로
+				event.srcElement.style.transform = "translate(0px,0px)";
+				document.body.style.backgroundColor="white";
+			}
+			
+			
+		});
+	}
+
+};
+
+
+	
+
+</script>
+<title></title>
+
+</head>
+<body>
+	<!-- ex51_style.htm -->
+	<nav>
+		<img src="../images/rect_icon01.png" data-color="#A67F62" />
+		<img src="../images/rect_icon02.png" data-color="#BE4F3B" />
+		<img src="../images/rect_icon03.png" data-color="#E7C758" />
+		<img src="../images/rect_icon04.png" data-color="#666666" />
+		<img src="../images/rect_icon05.png" data-color="#63AFD1" />
+	</nav>
+	
+	
+	
+	
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+</style>
+<script src="/WebClientTest/jquery/js/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function(	){
+
+
+		//alert("hello");
+
+		//CSS : 1.태그검색 -> 2. 속성제어
+		//javascript : 1. 태그검색 -> 속성,PCDATA,CSS제어
+		//jQuery : 1. 태그검색(BOM,DOM) -> 개량 -> 2 속성, PCDATA, CSS 제어 개량
+		
+		//1. DOM
+		var div = document.getElementsByTagName("div");
+		
+		for(var i =0; i<div.length; i++){
+			/* div[i].style.color="red"; */
+		}
+		
+		//2. jQuery
+		/* $("div").css("background-color","yellow"); */
+		
+		
+		//jQurey(CSS 선택자) 함수
+		// - 태그를 검색해서 반환하는 역할
+		
+		// jQuery는 태그를 찾을 때 BOM이나 DOM을 사용하지 않고 CSS 선택자를 사용하나.
+		// A. 태그선택자
+		//console.log(jQuery("div"));
+		//jQuery("div").css("color","blue");
+		
+		// B. 아이디 선택자
+		//jQuery("#box1").css("color","orange");
+		
+		// C. class 선택자
+		//jQuery(".box").css("color","yellow");
+		
+		// D. 자식 / 자손선택자
+		//jQuery("#list1 li").css("color","green");
+		//jQuery("#list1 > li").css("color","green");
+		
+		//E. 형제 /인접 선택자
+		//jQuery("ul + ul").css("display","none");
+		
+		//F. 속성 선택자
+		//jQuery("div[title]").css("color","red");
+		
+		//G. 여러가지 필터
+		jQuery("li:nth-child(even)").css("color","blue");//even 짝수 odd 홀수
+		
+		
+	});
+	
+
+
+
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+
+	<!-- ex02_selector.htm -->
+	
+	<div title="도움말">상자</div>
+	<div>상자</div>
+	<div title="도움말">상자</div>
+	
+	<ul id="list1">
+		<li>하나</li>
+		<li>둘</li>
+		<li>셋</li>
+	</ul>
+	<ul id="list2">
+		<li>하나</li>
+		<li>둘</li>
+		<li>셋</li>
+	</ul>
+	<hr />
+	<div id="box1" class="box">상자1</div>
+	<div id="box2">상자2</div>
+	<div id="box3" class="box">상자3</div>
+	<div id="box4">상자4</div>
+	<div id="box5" class="box">상자5</div>
+	<div>상자6</div>
+	<div>상자7</div>
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -7,31 +7,27 @@
 <script>
 	var icon, tbl1;
 	var timer = 0;
+	var temp;
 	var td;
 	window.onload = function() {
 		icon = document.getElementsByClassName("icon");
 		td = document.getElementsByTagName("td");
 		tbl1 = document.getElementById("tbl1");
 		for(var i =0; i<tbl1.childNodes.length; i++){
-			
 			td[i].style.overflow = "hidden";
 		}
 		for (var i = 0; i < icon.length; i++) {
 			icon[i].onmousedown = function() {
 				if (timer == 0) {
-				var c = event.srcElement;
- 				c.style.zIndex = -1;
-				c.style.transition = "all .5s";
-				c.style.position = "relative";
-				c.style.transform = "translate(130px,130px)";
-				
-				timer = setTimeout(function() {
-					c.style.transform = "translate(0px,0px)";
-					timer=0;
-				}, 1000);
-				
+					var c = event.srcElement;
+	 				c.style.zIndex = -1;
+					c.style.transition = "all .5s";
+					c.style.transform = "translate(130px,130px)";	
+					timer = setTimeout(function() {
+						c.style.transform = "translate(0px,0px)";
+						timer=0;
+					}, 1000);
 			};
-			
 			}
 		}
 
