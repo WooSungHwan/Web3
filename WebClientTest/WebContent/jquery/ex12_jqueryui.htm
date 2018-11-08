@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	.box{
+		border : 1px solid black;
+		width:350px;
+		height:350px;
+		background : yellow;
+		margin:50px;
+	}
+	
+</style>
+<script src="/WebClientTest/jquery/js/jquery-1.12.4.js"></script>
+<script src="/WebClientTest/jquery/js/jquery-ui.js"></script>
+<script>
+	$(document).ready(function(	){
+
+		$("#cat1").draggable({
+			//axis : "y"
+			grid :[128,128] //기준점을 잡아놓은 배치를 할떄 유용하다
+		});
+		$("#cat2").draggable({
+			containment:"#box1"
+		});
+		
+		$("#cat3,#cat4,#cat5").draggable({
+			//containment:".box" 실패
+			containment : "parent",
+			cursor:"move"
+		});
+
+	
+	});
+	
+
+
+
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/jquery/css/jquery-ui.css">
+</head>
+<body>
+	<!-- ex12_jqueryui.htm -->
+	
+	<img src="../images/catty01.png" alt="" id="cat1"/>
+	
+	<div class="box" id="box1">
+		<img src="../images/catty02.png" alt="" id="cat2"/>
+	</div>
+	
+	<div class="box" id="box2">
+		<img src="../images/catty03.png" alt="" id="cat3"/>
+	</div>
+	
+	<div class="box" id="box3">
+		<img src="../images/catty04.png" alt="" id="cat4"/>
+	</div>
+	
+	<div class="box" id="box4">
+		<img src="../images/catty05.png" alt="" id="cat5"/>
+	</div>
+	
+</body>
+</html>

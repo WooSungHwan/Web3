@@ -67,3 +67,9 @@ body,p,div,span,ul,li,ol,table,th,td,input,textarea,button,a{
 .box.orange {
 	background-color: #E5CE61;
 }
+a{
+	text-decoration: none;
+}
+a:hover{
+	color:tomato;
+}

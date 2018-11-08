@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	
+</style>
+<script src="/WebClientTest/jquery/js/jquery-1.12.4.js"></script>
+<script>
+	//jQuery Effect
+	// - 일부 CSS 속성 지원
+	//jQueryUI Effect
+	
+	
+	//jQuery Effect
+	//- hide(); , fadeOut(); , slideUp();
+	//- show(); , fadeIn(); , slideDown();
+	//- toggle(); , fadeToggle(); , slideToggle();
+	// - animate(객체,시간) : 사용자 정의형 (CSS 속성을 가지고 제어)
+	
+	$(document).ready(function(	){
+		
+		$("#btn1").click(function(){
+			//$("#box1").hide("fast"); //display : none으로 사라지게함. 그래서 글자가 같이 올라감
+			//$("#box1").hide(2000); //상수값도 가능.
+			
+			//$("#box1").fadeOut(2000); // 매개변수 : 속도
+			
+			//$("#box1").slideUp(); //매개변수 : 속도
+			
+			$("#box1").animate({
+				opacity : 0,
+				width:"0px",
+				height:"0px"
+				//trnasform : "translate(0px,-300px)" 이거안됨
+			},1000);
+		}); //감추는애
+	
+		$("#btn2").on("click",function(){
+			//$("#box1").show("slow");
+			
+			//$("#box1").fadeIn();
+			
+			//$("#box1").slideDown();
+			
+			$("#box1").animate({
+				opacity : 1,
+				width:"200px",
+				height:"200px"
+			},1000);
+		});//보이는애
+
+		$("#btn3").click(function(){
+			//$("#box1").toggle("slow");
+			
+			//$("#box1").fadeToggle();
+			
+			//$("#box1").slideToggle();
+			
+			$("#box1").animate({
+				opacity: "toggle",
+				width: "toggle",
+				height: "toggle"
+			},1000);
+		});//토글
+		
+		$("#btn4").click(function(){
+			//1. 상자의 현재 크기 얻어오기
+			//2. +=20 누적
+			$("#box1").animate({
+				width: "+=20",
+				height: "+=20"
+			},1000);
+		});
+		
+		$("#btn5").click(function(){
+			
+			//jQuery도 메소드 체이닝을 지원한다.
+			// - 반환값 처리를 잘 해놓은 상태
+			// - 메소드 체이닝 : 행동을 연속적으로 실행할 수 있는 상태
+			
+			/* $("#box1").hide(1000);
+			$("#box1").show(1000);
+			$("#box1").slideUp(1000);
+			$("#box1").slideDown(1000);  대상객체가 계속 똑같잖아?*/
+			
+			//jQuery는 메소드 이후에 객체를 반환하는 경우가 있다.(경우에따라 시간 안주면 안되는것도 있다.)
+			/*$("#box1")
+				.hide(1000)
+				.show(1000)
+				.slideUp(1000)
+				.slideDown(1000); */
+			$("#box1").animate({
+				width:"+=200px"
+			},300).animate({
+				height:"+=200px"
+			},300).animate({
+				opacity:0
+			},300).animate({
+				opacity:1
+			},300);
+		});
+		
+		$("#btn6").click(function(){
+			//콜백함수, CallBack Function
+			// - 사용자(개발자)가 직접 부르는 것이 아닌, 시스템(런타임)에 의해서 불려지는 함수
+			/* $("#box1").hide(5000);
+			//alert("상자가 사라졌어!"); -> alert이 먼저뜬다
+			setTimeout(function(){
+				alert("상자가 사라졌어!");
+			},5000); 이거의 최종형은ㅇ 아래에!*/
+			
+			$("#box1").hide(5000,function(){
+				alert("상자가 사라졌어!");
+				$("#btn6").val("상자보이기");	
+			});//뒤의 함수는 콜백함수로 hide가 끝나고 발생
+			
+			
+			
+		});
+		
+	
+	});//ready
+	
+
+
+
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex06_effect.htm -->
+	
+	<input type="button" id ="btn1" value="버튼1" />
+	<input type="button" id ="btn2" value="버튼2" />
+	<input type="button" id ="btn3" value="버튼3" />
+	<input type="button" id ="btn4" value="버튼4" />
+	<input type="button" id ="btn5" value="버튼5" />
+	<input type="button" id ="btn6" value="버튼6" />
+	
+	<hr />
+	
+	<div id="box1" class="box medium red" >상자</div>
+	
+	
+	
+	
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

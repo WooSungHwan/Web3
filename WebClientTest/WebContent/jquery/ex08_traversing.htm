@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	html,body,div{
+		border:5px solid #A9A9A9;
+		margin:10px;
+		padding:10px;
+	}
+	
+	#me{
+		border-color : orange;
+	}
+	
+</style>
+<script src="/WebClientTest/jquery/js/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function(	){
+		//DOM 노드 검색
+		//1. getXXX() x4개
+		//2. Axis
+		// - childNodes, children, firstChild, lastChild
+		
+		
+		//노드 검색(태그검색)
+		//1. $("")
+		//2. Axis
+		// - 현재 수업할 내용임.
+	
+		$("#me").click(function(){
+			//부모 검색
+			//$("#me").parent().css("border-color", "cornflowerblue");             --parent
+			//$("#me").parent().parent().css("border-color","cornflowerblue");	   --parent
+			//$("#me").parents().css("border-color", "cornflowerblue");			   --parents
+			//$("#me").parentsUntil("html").css("border-color", "cornflowerblue"); --parentUntil
+			
+			
+			//자식검색
+			//$("#me").children().css("border-color","tomato"); //자식만             --children
+			//$("#me").children().children().css("border-color","tomato");			 --children
+			//$("#me").children().css("border-color","tomato").children().css("border-color","tomato");
+			
+			
+			
+			//$("#me").find(".a").css("border-color","green"); //내 자식의 요소들만 검색
+			
+			//형제
+			//$("#me").prev().css("border-color","yellow"); //형찾기
+			//$("#me").next().css("border-color","yellow"); //동생
+			$("#me").siblings().css("border-color","yellow"); //형제들
+			
+			
+			
+			
+		});
+		
+
+	
+	});
+	
+
+
+
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/css/css/basic.css">
+</head>
+<body>
+	<!-- ex08_traversing.htm -->
+	
+	
+	<div>
+		<div></div>
+		<div id="me"> 
+			<div class="a"></div>
+			<div>
+				<div></div>
+				<div class="a"></div>
+			</div>
+			<div></div>
+		</div>
+		<div class="a"></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
