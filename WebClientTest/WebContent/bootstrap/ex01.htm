@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	body{
+		margin-bottom:200px;
+	}
+</style>
+<script src="/WebClientTest/jquery/js/jquery-1.12.4.js"></script>
+<script src="/WebClientTest/bootstrap/js/bootstrap.js"></script>
+<script>
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/bootstrap/css/bootstrap.css">
+</head>
+<body>
+	<!-- ex01.htm -->
+	<div class = "container">
+		<h1>Bootstrap</h1>
+		
+		<h2>버튼의 종류</h2>
+		<input type="button" value="버튼입니다" class ="btn"/>
+		<input type="button" value="버튼입니다" class ="btn btn-default"/>
+		<input type="button" value="버튼입니다" class ="btn btn-success"/>
+		<input type="button" value="버튼입니다" class ="btn btn-info"/>
+		<input type="button" value="버튼입니다" class ="btn btn-primary"/>
+		<input type="button" value="버튼입니다" class ="btn btn-warning"/>
+		<input type="button" value="버튼입니다" class ="btn btn-danger"/>
+		
+		<h2>버튼의 크기</h2>
+		<input type="button" value="버튼입니다" class ="btn btn-primary btn-xs"/>
+		<input type="button" value="버튼입니다" class ="btn btn-primary btn-sm"/>
+		<input type="button" value="버튼입니다" class ="btn btn-primary"/>
+		<input type="button" value="버튼입니다" class ="btn btn-primary btn-lg"/>
+		
+		
+		<h2>테이블</h2>
+		
+		<!-- <table style="width: 700px;" class="table"> -->
+		<!-- <table style="width: 700px;" class="table table-bordered"> -->
+		<!-- <table style="width: 700px;" class="table table-striped"> -->
+		<!-- <table style="width: 700px;" class="table table-condensed"> -->
+		<table style="width: 700px;" class="table table-bordered table-condensed table-hover">
+			<tr>
+				<th>번호</th>
+				<th>이름</th>
+				<th>나이</th>
+				<th>성별</th>
+				<th>주소</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>우성환</td>			
+				<td>25</td>			
+				<td>남성</td>			
+				<td>경기도 의정부시</td>			
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>우성환</td>			
+				<td>25</td>			
+				<td>남성</td>			
+				<td>경기도 의정부시</td>			
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>우성환</td>			
+				<td>25</td>			
+				<td>남성</td>			
+				<td>경기도 의정부시</td>			
+			</tr>
+			<tr class="info">
+				<td>1</td>
+				<td>우성환</td>			
+				<td>25</td>			
+				<td>남성</td>			
+				<td>경기도 의정부시</td>			
+			</tr>
+			<tr class="danger">
+				<td>1</td>
+				<td>우성환</td>			
+				<td>25</td>			
+				<td>남성</td>			
+				<td>경기도 의정부시</td>			
+			</tr>
+			<tr class="success">
+				<td>1</td>
+				<td>우성환</td>			
+				<td>25</td>			
+				<td>남성</td>			
+				<td>경기도 의정부시</td>			
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>우성환</td>			
+				<td>25</td>			
+				<td>남성</td>			
+				<td>경기도 의정부시</td>			
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>우성환</td>			
+				<td>25</td>			
+				<td>남성</td>			
+				<td>경기도 의정부시</td>			
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>우성환</td>			
+				<td>25</td>			
+				<td>남성</td>			
+				<td>경기도 의정부시</td>			
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>우성환</td>			
+				<td>25</td>			
+				<td>남성</td>			
+				<td>경기도 의정부시</td>			
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>우성환</td>			
+				<td>25</td>			
+				<td>남성</td>			
+				<td>경기도 의정부시</td>			
+			</tr>
+		</table>
+		
+		<h2>폼 태그</h2>
+		
+		<table class="table table-bordered">
+			<tr>
+				<th style="width:150px;">텍스트박스</th>
+				<td><input type="text" class="form-control" /></td>
+			</tr>
+			<tr>
+				<th style="width:150px;">암호 박스</th>
+				<td><input type="password" class="form-control" /></td>
+			</tr>
+			<tr>
+				<th style="width:150px;">멀티라인 textarea</th>
+				<td><textarea cols="50" rows="5" class="form-control"></textarea></td>
+			</tr>
+			<tr>
+				<th style="width:150px;">셀렉션</th>
+				<td><select class="form-control">
+					<option>부트스트랩</option>
+					<option>제이쿼리</option>
+					<option>부부부부</option>
+					<option>아이유부</option>
+				</select></td>
+			</tr>
+			<tr>
+				<th style="width:150px;">체크박스</th>
+				<td>
+					<input type="checkbox" class="form-control"/>  <!-- 너무커서 기본값씀 -->
+				</td>
+			</tr>
+			<tr>
+				<th style="width:150px;">라디오버튼</th>
+				<td><input type="radio" class="form-control" /></td><!-- 너무커서 기본값씀 -->
+			</tr>
+			<tr>
+				<th style="width:150px;">파일 컨트롤</th>
+				<td>
+					<input type="file" class="form-control"/>
+				</td>
+			</tr>
+			
+		</table>
+		
+		
+		<h2>텍스트</h2>
+		
+		<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti obcaecati tempora praesentium rerum totam facere inventore quod aut beatae deleniti eveniet distinctio natus delectus id enim repellat autem! Mollitia impedit dolores tempora odio fugit vero ab. Repellat explicabo placeat commodi nam sit autem a harum sapiente maiores doloremque neque veniam architecto ex porro quae quibusdam optio corporis mollitia? Commodi obcaecati eligendi numquam at illo nobis delectus odit suscipit incidunt placeat eos ipsa facere praesentium accusamus sunt quibusdam soluta quos ad laudantium nemo? Fuga a facilis nam dolorem obcaecati accusantium suscipit veniam ipsum tenetur fugiat. Sapiente reiciendis laborum provident laudantium quisquam.</blockquote>
+		
+		<blockquote class="blockquote-reverse">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti obcaecati tempora praesentium rerum totam facere inventore quod aut beatae deleniti eveniet distinctio natus delectus id enim repellat autem! Mollitia impedit dolores tempora odio fugit vero ab. Repellat explicabo placeat commodi nam sit autem a harum sapiente maiores doloremque neque veniam architecto ex porro quae quibusdam optio corporis mollitia? Commodi obcaecati eligendi numquam at illo nobis delectus odit suscipit incidunt placeat eos ipsa facere praesentium accusamus sunt quibusdam soluta quos ad laudantium nemo? Fuga a facilis nam dolorem obcaecati accusantium suscipit veniam ipsum tenetur fugiat. Sapiente reiciendis laborum provident laudantium quisquam.</blockquote>
+		
+		
+		<h2>정의 목록</h2>
+		
+		<dl>
+			<dt>Lorem.</dt>
+			<dd>Lorem ipsum dolor sit amet.</dd>
+			<dt>Vel.</dt>
+			<dd>Fugit neque laboriosam distinctio in.</dd>
+			<dt>Voluptatum.</dt>
+			<dd>Vero officia ipsa sequi incidunt.</dd>
+			<dt>Eveniet.</dt>
+			<dd>Cum aliquid architecto ratione laboriosam!</dd>
+			<dt>Ex!</dt>
+			<dd>Non minima doloribus a architecto!</dd>
+		</dl>
+		
+		<h2>프로그래밍 코드</h2>
+		<p>태그를 설명합니다. <code>&lt;table&gt;</code> 태그는 테이블 객체를 생성합니다.</p>
+		<p>자바의 변수 선언은 <code>int a = 10;</code> 과 같은 문장으로 작성합니다.</p>
+		<p>이클립스의 실행은 <kbd>Ctrl + F11</kbd> 로 합니다</p>
+		
+		<h2>텍스트 색상</h2>
+		<p class="">Distinctio tempore molestias excepturi amet blanditiis aspernatur rem dignissimos maxime!</p>
+		<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita aliquam.</p>
+		<p class="text-primary">Quas ratione a repellendus cupiditate eligendi alias non expedita consequuntur.</p>
+		<p class="text-success">Reprehenderit omnis earum consequatur est optio voluptates porro maxime veritatis!</p>
+		<p class="text-info">Doloribus facilis aut non cupiditate beatae alias accusantium ea soluta!</p>
+		<p class="text-warning">Optio doloremque voluptatum consequatur nulla assumenda unde hic modi ab?</p>
+		<p class="text-danger">Voluptatibus autem dicta blanditiis exercitationem sed eius tempora hic dolores.</p>
+		
+		<h2>텍스트 색상</h2>
+		<p class="">Distinctio tempore molestias excepturi amet blanditiis aspernatur rem dignissimos maxime!</p>
+		<p class="bg-primary">Quas ratione a repellendus cupiditate eligendi alias non expedita consequuntur.</p>
+		<p class="bg-success">Reprehenderit omnis earum consequatur est optio voluptates porro maxime veritatis!</p>
+		<p class="bg-info">Doloribus facilis aut non cupiditate beatae alias accusantium ea soluta!</p>
+		<p class="bg-warning">Optio doloremque voluptatum consequatur nulla assumenda unde hic modi ab?</p>
+		<p class="bg-danger">Voluptatibus autem dicta blanditiis exercitationem sed eius tempora hic dolores.</p>
+		
+		<!-- $("img").addClass("img-thumbnail"); 이미지 썸네일 일괄처리 --> 
+		
+		<h2>이미지</h2>
+		<p><img src="../images/cat01.jpg" class="img-thumbnail" /></p>
+		<p><img src="../images/cat02.jpg" class="img-circle" /></p>
+		<p><img src="../images/cat03.jpg" class="img-rounded" /></p>
+		
+		
+		
+		
+		
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>	
+</html>
