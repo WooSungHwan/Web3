@@ -38,7 +38,7 @@
 		//console.log($(document).scrollTop());
 		
 		//현재 문서의 실제 높이
-// 		console.log($(document).outerHeight());
+ 		//console.log($(document).outerHeight());
 		
 		//상단의 수평바 너비 = 문서 실제 높이
 		// 0% : 0px = 100%  : 문서의 높이(px)
@@ -46,11 +46,7 @@
 		//? = 스크롤 위치* 100 / outerHeight
 		var w = $(document).scrollTop() * 100 / ($(document).outerHeight() - $(window).outerHeight());
 		$("#scrollbar").css("width",w+'%');
-			});
-	
-
-
-
+	});
 
 </script>
 <title></title>
